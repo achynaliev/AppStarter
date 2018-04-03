@@ -16,7 +16,7 @@ class NavBar extends React.Component {
           {this.props.startProject}
         </section>
       <section className="midNavbar">
-        <h2>AppStarter</h2>
+        <h2>APPSTARTER</h2>
       </section>
       <section className="rightNavbar">
         <Greeting />

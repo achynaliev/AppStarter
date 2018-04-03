@@ -1,0 +1,78 @@
+nav {
+	background-color: rgb(255, 255, 255);
+	display:flex;
+	justify-content: space-between;
+	padding: 10px 0;
+	width: 100%;
+	font-family: Helvetica;
+	font-size: 16px;
+	border-bottom: solid black 1px;
+	font-weight: 400;
+	line-height: 21px;
+	vertical-align: baseline;
+	margin-bottom: 0px;
+	align-items: center;
+
+	.leftnavbar {
+		display: inline-flex;
+		justify-content: center;
+
+		a {
+			padding-right: 10px;
+			padding-left: 10px;
+		}
+	}
+
+	.midNavbar {
+
+		h2 {
+			font-family: "Helvetica Neue";
+			font-size: 22px;
+			color: #034752;
+			margin-bottom: 0px;
+		}
+	}
+
+	.rightNavbar {
+		padding-right: 15px;
+	}
+}
+
+
+
+
+// .right-nav > ul > li {
+// 	margin-left: 5px;
+// 	cursor: pointer;
+// }
+//
+// .right-nav > ul > li:last-of-type {
+// 	position: relative;
+// 	padding: 7px 9px;
+// 	transition: background-color 0.3s;
+// }
+//
+// .left-nav > ul > li:hover,
+// .right-nav > ul > li:last-of-type:hover {
+// 	background-color: $lightest-gray;
+// }
+//
+// .left-nav span {
+// 	margin-left: 10px;
+// }
+//
+// .right-nav i {
+// 	font-size: 16px;
+// }
+
+// @media all and (max-width: 1000px) {
+//   .right-nav button {
+//   	display: none;
+//   }
+//   .left-nav > ul > li {
+//   	margin: 0;
+//   }
+//   .main-nav {
+//   	padding: 20px 0;
+//   }
+// }
