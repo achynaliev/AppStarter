@@ -10,6 +10,7 @@ class SignupForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   update(field) {
@@ -34,6 +35,10 @@ class SignupForm extends React.Component {
         ))}
       </ul>
     );
+  }
+
+  handleDemoLogin(e) {
+    this.props.processLogin({username: 'atai', password: 'password' })
   }
 
   render() {
@@ -73,6 +78,10 @@ class SignupForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
+        <br/>
+          <div className="demologin">
+            <button onClick={this.handleDemoLogin}>DEMO LOGIN</button>
+          </div>
       </div>
     );
   }

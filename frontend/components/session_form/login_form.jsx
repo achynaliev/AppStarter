@@ -9,6 +9,7 @@ class LoginForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoLogin = this.handleDemoLogin.bind(this);
   }
 
   update(field) {
@@ -22,6 +23,10 @@ class LoginForm extends React.Component {
     const user = Object.assign({}, this.state);
     console.log(user)
     this.props.processForm(user);
+  }
+
+  handleDemoLogin(e) {
+    this.props.processForm({username: 'atai', password: 'password' })
   }
 
   renderErrors() {
@@ -65,6 +70,9 @@ class LoginForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
+        <div className="demologin">
+          <button onClick={this.handleDemoLogin}>DEMO LOGIN</button>
+        </div>
       </div>
     );
   }
