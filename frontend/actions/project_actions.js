@@ -8,9 +8,9 @@ export const receiveAllProjects = projects => ({
   projects
 });
 
-export const receiveProject = project => ({
+export const receiveProject = currentProject => ({
   type: RECEIVE_PROJECT,
-  project
+  currentProject
 });
 
 export const getAllProjects = () => dispatch => (
@@ -18,5 +18,5 @@ export const getAllProjects = () => dispatch => (
 );
 
 export const getAProject = (id) => dispatch => (
-  projectAPIUtil.requestProject(id).then(project => (dispatch(receiveProject(project))))
+  projectAPIUtil.requestProject(id).then(Currentproject => (dispatch(receiveProject(Currentproject))))
 );
