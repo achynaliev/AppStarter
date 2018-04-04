@@ -44,11 +44,11 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="grey-background-body">
-        <div className="login-form-container">
-          <form onSubmit={this.handleSubmit} className="login-form-box">
-            Welcome to AppStarter
+        <div className="signup-form-container">
+          <div className="signup_link_login">Have an account? {this.props.navLink}</div>
+          <form onSubmit={this.handleSubmit} className="sign-form-box">
+            <h3>Sign up</h3>
             <br/>
-            Please {this.props.formType} or {this.props.navLink}
             {this.renderErrors()}
             <div className="login-form">
               <br/>
@@ -57,7 +57,7 @@ class SignupForm extends React.Component {
                   value={this.state.username}
                   onChange={this.update('username')}
                   className="signup-input"
-                  placeholder="username"
+                  placeholder="Username"
                 />
               </label>
               <br/>
@@ -66,7 +66,7 @@ class SignupForm extends React.Component {
                   value={this.state.email}
                   onChange={this.update('email')}
                   className='signup-input'
-                  placeholder="email"
+                  placeholder="Email"
                   />
               </label>
               <br/>
@@ -75,16 +75,17 @@ class SignupForm extends React.Component {
                   value={this.state.password}
                   onChange={this.update('password')}
                   className="signup-input"
-                  placeholder="password"
+                  placeholder="Password"
                 />
               </label>
               <br/>
               <input className="session-submit" type="submit" value={this.props.formType} />
             </div>
           </form>
+          <h6>or</h6>
           <br/>
             <div className="demologin">
-              <button onClick={this.handleDemoLogin}>DEMO LOGIN</button>
+              <button onClick={this.handleDemoLogin}>Demo login</button>
             </div>
         </div>
       </div>
