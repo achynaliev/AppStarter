@@ -34,4 +34,8 @@ class User < ApplicationRecord
     user.password?(password) ? user : nil
   end
 
+  has_many :projects,
+    foreign_key: :user_id,
+    class_name: :Project
+
 end
