@@ -3,11 +3,21 @@
   flex-direction: column;
   background: white;
   width: 390px;
-  height: 600px;
+  height: 640px;
   margin: 0 auto;
   margin-top: 55px;
   border: solid #f0f0f0 0.5px;
   align-items: center;
+
+  ul {
+    // position: fixed;
+    margin-top: 20px;
+
+    li {
+      font-size: 14px;
+      color: red;
+    }
+  }
 
   h6 {
     font-size: 14px;
@@ -44,7 +54,7 @@
     display: inline-block;
     text-align: center;
     width: inherit;
-    margin-top: -15px;
+    margin-top: -20px;
 
     input {
       border: solid #f0f0f0 1.5px;

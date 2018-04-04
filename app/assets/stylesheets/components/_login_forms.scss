@@ -3,11 +3,21 @@
   flex-direction: column;
   background: white;
   width: 390px;
-  height: 530px;
+  height: 550px;
   margin: 0 auto;
   margin-top: 55px;
   border: solid #f0f0f0 0.5px;
   align-items: center;
+
+  ul {
+    padding-top: 20px;
+
+    li {
+      font-size: 14px;
+      color: red;
+    }
+  }
+
 
   h6 {
     font-size: 14px;
