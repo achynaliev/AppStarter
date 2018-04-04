@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
   return {
-    exploreLink: <Link to="/explore">explore</Link>,
-    startProject: <Link to="/project/new">Link</Link>
+    exploreLink: <Link to="/explore">Explore</Link>,
+    startProject: <Link to="/project/new">Start a project</Link>
   };
 };
 

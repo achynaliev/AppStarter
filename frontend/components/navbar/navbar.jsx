@@ -19,6 +19,7 @@ class NavBar extends React.Component {
         <h2>APPSTARTER</h2>
       </section>
       <section className="rightNavbar">
+        <a>Search</a>
         <Greeting />
       </section>
       </nav>

@@ -7,34 +7,60 @@ nav {
 	font-family: Helvetica;
 	font-size: 16px;
 	border-bottom: solid black 1px;
-	font-weight: 400;
 	line-height: 21px;
 	vertical-align: baseline;
 	margin-bottom: 0px;
 	align-items: center;
+	height: 45px;
+
+	a:hover {
+		color: #009e74;
+	}
 
 	.leftnavbar {
 		display: inline-flex;
-		justify-content: center;
+		justify-content: flex-start;
+		flex: 1;
 
 		a {
-			padding-right: 10px;
-			padding-left: 10px;
+			margin-left: 30px;
+			padding-right: 0px;
+			padding-left: 0px;
+			font-size: 14px;
+			font-weight: lighter;
 		}
 	}
 
 	.midNavbar {
+		display: inline-flex;
+		flex: 1;
+		justify-content: center;
+		padding-top: 3px;
 
 		h2 {
-			font-family: "Helvetica Neue";
-			font-size: 22px;
-			color: #034752;
+			font-family: 'Baloo Bhaina', cursive;
+			font-size: 26px;
+			color: #034751;
+			text-shadow: 2px 1px #034751;
 			margin-bottom: 0px;
+			width: 180px;
+			font-weight: 900;
 		}
 	}
 
 	.rightNavbar {
-		padding-right: 15px;
+		flex: 1;
+		display: inline-flex;
+		justify-content: flex-end;
+
+		a {
+			margin-right: 30px;
+			padding-right: 0px;
+			padding-left: 0px;
+			font-size: 14px;
+			font-weight: lighter;
+		}
+
 	}
 }
 

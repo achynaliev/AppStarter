@@ -1,5 +1,5 @@
-/* PHASE 0: Reset */
-
+// /* PHASE 0: Reset */
+//
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
 section, img, div, h2, p, form,
@@ -28,20 +28,20 @@ img {
   height: auto;
 }
 
-input[type="password"],
-input[type="email"],
-input[type="text"],
-input[type="submit"],
-textarea,
-button {
-  /*
-  Get rid of native styling. Read more here:
-  http://css-tricks.com/almanac/properties/a/appearance/
-  */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
+// input[type="password"],
+// input[type="email"],
+// input[type="text"],
+// input[type="submit"],
+// textarea,
+// button {
+//   /*
+//   Get rid of native styling. Read more here:
+//   http://css-tricks.com/almanac/properties/a/appearance/
+//   */
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+// }
 
 button,
 input[type="submit"] {
