@@ -6,7 +6,7 @@ const sessionLinks = () => (
 );
 
 const personalGreeting = (currentUser, logout) => (
-    <a className="nav-logout" onClick={logout}>Log Out</a>
+    <a className="nav-logout" onClick={logout}>Log out</a>
 );
 
 const Greeting = ({ currentUser, logout }) => (
