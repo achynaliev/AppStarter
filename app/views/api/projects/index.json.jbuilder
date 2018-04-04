@@ -1,0 +1,7 @@
+@projects.each do |project|
+  json.set! project.id do
+    json.extract! project, :title, :short_description, :image_url
+    # json.rewardsId []
+    # json.categories []
+  end
+end
