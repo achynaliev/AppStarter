@@ -3,7 +3,7 @@
   flex-direction: column;
   background: white;
   width: 390px;
-  height: 550px;
+  height: 600px;
   margin: 0 auto;
   margin-top: 55px;
   border: solid #f0f0f0 0.5px;
@@ -45,7 +45,8 @@
   h3 {
     font-size: 34px;
     font-weight: lighter;
-    padding-right: 240px;
+    // padding-right: 240px;
+    padding-top: 20px;
     position: relative;
     margin-bottom: -25px;
   }

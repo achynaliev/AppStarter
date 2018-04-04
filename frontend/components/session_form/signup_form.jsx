@@ -49,7 +49,6 @@ class SignupForm extends React.Component {
     return (
       <div className="grey-background-body">
         <div className="signup-form-container">
-          <div className="signup_link_login">Have an account? {this.props.navLink}</div>
           <form onSubmit={this.handleSubmit} className="sign-form-box">
             <h3>Sign up</h3>
             <br/>
@@ -91,6 +90,7 @@ class SignupForm extends React.Component {
             <div className="demologin">
               <button onClick={this.handleDemoLogin}>Demo login</button>
             </div>
+            <div className="signup_link_login">Have an account? {this.props.navLink}</div>
         </div>
       </div>
     );
