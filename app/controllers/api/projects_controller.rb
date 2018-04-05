@@ -1,7 +1,7 @@
 class Api::ProjectsController < ApplicationController
 
   def index
-    @projects = Project.all.limit(10)
+    @projects = Project.includes(:user).all.limit(10)
     render "api/projects/index"
   end
 
