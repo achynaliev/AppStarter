@@ -1,0 +1,31 @@
+
+ul {
+  width: 75vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  li {
+    flex: 1 1 1;
+    width: 30%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 35px;
+
+    .ProjectItemView {
+        display: block;
+        width: 100%;
+        border: solid lightgrey 1px;
+        height: 500px;
+        align-content: center;
+
+        img {
+          height: 45%;
+          width: 100%;
+          object-fit: cover;
+        }
+
+      }
+  }
+}
