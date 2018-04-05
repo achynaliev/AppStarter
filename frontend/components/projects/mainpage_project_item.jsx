@@ -9,14 +9,14 @@ class ProjectMainpageItem extends React.Component {
 
   render() {
     return (
-      <li>
-        <section className="ProjectItemView">
-          {<Link to={`/users/${this.props.project.userId.id}`}>
-          <img src={this.props.project.image_url}/>
-            <h4>{this.props.project.title}</h4>
-            </Link>}
-            <h6>BY: {this.props.project.username}</h6>
-        </section>
+      <li className="ProjectItemView">
+        {<Link to={`/projects/${this.props.project.id}`}>
+        <img src={this.props.project.image_url}/>
+        <div>
+          <h4>{this.props.project.title}</h4>
+          <h6>BY: {this.props.project.username}</h6>
+        </div>
+        </Link>}
       </li>
     )
   }

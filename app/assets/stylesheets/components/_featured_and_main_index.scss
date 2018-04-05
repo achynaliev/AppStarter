@@ -1,0 +1,142 @@
+.featured-and-index {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 75vw;
+  height: 650px;
+  margin: 0 auto;
+  font-family: Helvetica;
+  font-weight: lighter;
+
+  .FeaturedProject {
+
+    position: relative;
+
+    img {
+      width: 600px;
+      height: 600px;
+      object-fit: cover;
+    }
+
+    h4 {
+      position: absolute;
+      bottom: 90px;
+      left: 25px;
+      color: black;
+      font-weight: lighter;
+      font-size: 30px;
+      background-color: white;
+      padding: 3px;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+    }
+
+    h6 {
+      position: absolute;
+      bottom: 70px;
+      left: 25px;
+      color: black;
+      font-weight: 500;
+      font-size: 15px;
+      background-color: white;
+      padding: 4px;
+      padding-top: 5px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    h4:hover {
+      color: #009e74;
+    }
+
+    h6:hover {
+      color: #009e74;
+    }
+  }
+
+  .mainpage-project-index {
+
+      border-top: solid lightgray 1px;
+      width: 95%;
+      margin-left: 25px;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid lightgray 1px;
+        padding-right: 350px;
+
+
+
+        a {
+          display: flex;
+          justify-content: space-between;
+          margin-left: 10px;
+          align-items: center;
+
+          div {
+            padding-right: 20px;
+            width: 150px;
+
+            h4 {
+              padding-top: 20px;
+              font-weight: 100;
+              margin: 5px;
+              letter-spacing: 0.5px;
+              text-transform: capitalize;
+              font-size: 15px;
+            }
+
+            h6 {
+              margin: 5px;
+              padding-bottom: 20px;
+              font-weight: lighter;
+              color: gray;
+              letter-spacing: 0.5px;
+            }
+          }
+
+        h4:hover {
+          color: #009e74;
+          text-decoration: underline;
+        }
+
+        h6:hover {
+          color: #009e74;
+          text-decoration: underline;
+        }
+
+
+        }
+
+        img {
+          width: 125px;
+          height: 70px;
+          object-fit: cover;
+          padding-right: 25px;
+        }
+
+      }
+
+      .viewall-main-index {
+        position: relative;
+        margin-top: 16px;
+        // margin-left: 20px;
+        padding: 6px;
+        border: solid lightgray 1px;
+        font-size: 13px;
+        align-items: center;
+        width: 60px;
+      }
+
+      .viewall-main-index:hover {
+        border: solid black 1px;
+        // color: #009e74;
+      }
+  }
+
+}

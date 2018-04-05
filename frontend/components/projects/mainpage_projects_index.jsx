@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ProjectMainpageItem from './mainpage_project_item';
-import FeaturedProject from './featured_project';
+import { FeaturedProject } from './featured_project';
 
 class ProjectsMainpageIndex extends React.Component {
   constructor(props) {
@@ -15,9 +15,11 @@ class ProjectsMainpageIndex extends React.Component {
   render() {
     return (
       <section className="featured-and-index">
+        {this.props.projects.map( (project , i) => i == 4 ? <FeaturedProject project={project} key={`project-${project.id}`} /> : null)}
         <section className="right-main-index-projects">
           <ul className="mainpage-project-index">
-            {this.props.projects.map( (project) => <ProjectMainpageItem project={project} key={`project-${project.id}`} />)}
+            {this.props.projects.map( (project , i) => i < 4 ? <ProjectMainpageItem project={project} key={`project-${project.id}`} /> : null)}
+            <Link to="/explore" className="viewall-main-index"><button>VIEW ALL</button></Link>
           </ul>
         </section>
       </section>
@@ -25,5 +27,4 @@ class ProjectsMainpageIndex extends React.Component {
   }
 };
 
-// <FeaturedProject project={this.props.projects.first}/>
 export default ProjectsMainpageIndex;
