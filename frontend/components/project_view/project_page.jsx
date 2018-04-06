@@ -13,7 +13,6 @@ class ProjectViewPage extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <section className="project-page-view">
         <div className="project-view-header">
