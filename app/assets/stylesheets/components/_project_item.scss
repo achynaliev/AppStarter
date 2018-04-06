@@ -25,6 +25,52 @@
           object-fit: cover;
         }
 
+        .header-explore-project-item {
+          margin-left: 15px;
+          margin-right: 20px;
+          border-bottom: solid #009e73 2px;
+          margin-bottom: -10px;
+          height: 95px;
+
+          h4 {
+            font-size: 20px;
+            font-weight: 200;
+          }
+
+          h6 {
+            margin-top: -10px;
+            font-size: 14px;
+            font-weight: 100;
+          }
+
+        }
+
+        .botton-explore-project-item {
+          margin-left: 15px;
+          margin-right: 20px;
+          display: flex;
+          flex-direction: column;
+
+
+          h3 {
+            font-size: 13px;
+            font-weight: 100;
+            color: #009e73;
+            margin-top: 20px;
+          }
+
+          h4 {
+            margin-top: -6px;
+            font-size: 13px;
+            font-weight: 100;
+          }
+
+          h5 {
+            font-size: 13px;
+            font-weight: 100;
+          }
+        }
+
       }
   }
 }
