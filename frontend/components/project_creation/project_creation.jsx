@@ -9,7 +9,7 @@ class ProjectCreationForm extends React.Component {
       title: '',
       short_description: '',
       full_description: '',
-      funding_goal: 0,
+      funding_goal: '',
       funding_end_date: '',
       image_url: '',
       video_url: ''
@@ -82,7 +82,7 @@ class ProjectCreationForm extends React.Component {
               onChange={this.update('funding_goal')}
             />
             <input
-              type="text"
+              type="date"
               value={this.state.funding_end_date}
               placeholder="Campaign end date. yearmonthday(20190203)"
               onChange={this.update('funding_end_date')}
