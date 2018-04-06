@@ -1,0 +1,40 @@
+.main-app-stats {
+  border-bottom: solid black 0.7px;
+
+  .stats-list-main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    font-family: Helvetica;
+    width: 80vw;
+    height: 80px;
+
+    h4 {
+      font-size: 14px;
+      font-weight: 200;
+      color: gray;
+      align-self: center;
+    }
+
+    h5 {
+      font-size: 14px;
+      font-weight: 400;
+      color: black;
+      align-self: center;
+      margin-top: -15px;
+    }
+
+    li {
+      width: 100%;
+      border-right: solid lightgray 1px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .last-li-stats-main {
+      border-right: solid lightgray 0px;
+    }
+
+  }
+
+}

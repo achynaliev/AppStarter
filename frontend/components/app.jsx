@@ -14,12 +14,14 @@ import SignupFormContainer from './session_form/signup_form_container';
 import ProjectsIndexContainer from './projects/projects_index_container';
 import ProjectsMainpageIndex from './projects/mainpage_projects_container';
 import ProjectPageContainer from './project_view/project_page_container';
+import AppStaterStatsView from './totalstats/total_stats_main';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
     <header>
     <NavBarContainer />
+    <Route exact path="/" component={AppStaterStatsView}/>
     </header>
     <main>
     <Route exact path="/projects/:projectid" component={ProjectPageContainer}/>
