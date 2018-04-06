@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ProjectCampaign } from './project_campaign'
 
 class ProjectViewPage extends React.Component {
   constructor(props) {
@@ -42,6 +43,10 @@ class ProjectViewPage extends React.Component {
               it reaches its goal by Thu, April 26 2018 4:13 AM PDT.</h6>
           </section>
         </div>
+        <div className="project-page-campaign-comments">
+
+        </div>
+        <ProjectCampaign project={this.props.project}/>
       </section>
     )
   }

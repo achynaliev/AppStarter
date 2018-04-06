@@ -46,7 +46,7 @@
     display: flex;
     justify-content: space-between;
     border-bottom: solid gray 1px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 
 
     .project-page-backing {
@@ -106,9 +106,97 @@
         padding-top: 15px;
       }
     }
+  }
+}
 
+.Project-campaign {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  .campaign-about {
+    padding-top: 10px;
+    width: 660px;
+    margin: 0 auto;
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 0.5px;
   }
 
+  h3 {
+    padding-left: 250px;
+    font-size: 20px;
+    font-weight: 400;
+  }
 
+  .campaign-rewards {
 
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      border: solid gray 1px;
+      margin-top: 20px;
+
+      h3 {
+        padding: 0px;
+        font-size: 20px;
+        font-weight: 300;
+        margin-top: 0px;
+      }
+
+      h4 {
+        font-size: 11px;
+        padding: 10px;
+        border: solid lightgray 1px;
+
+        input {
+          position: relative;
+          border-left: solid black 1px;
+          text-align: left;
+          padding-left: 10px;
+          font-size: 15px;
+          font-weight: 200;
+        }
+      }
+
+      button {
+        margin-top: 10px;
+        background-color: #009e73;
+        color: white;
+        font-weight: 100;
+        // border-radius: 3px;
+        transition: background-color 0.3s;
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+        height: 50px;
+        border: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        letter-spacing: 0.5px;
+      }
+
+      button:hover {
+        background-color: #047361;
+      }
+
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  img {
+    padding-top: 20px;
+    width: 680px;
+    height: 380px;
+    object-fit: cover;
+    padding-bottom: 20px;
+  }
 }
