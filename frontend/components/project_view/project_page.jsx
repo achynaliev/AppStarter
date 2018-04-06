@@ -27,7 +27,7 @@ class ProjectViewPage extends React.Component {
         <div className="project-page-main">
           <section>
             <iframe width="820" height="460"
-              src="https://www.youtube.com/embed/7ALPIons9NU?modestbranding=1&showinfo=0">
+              src={`https://www.youtube.com/embed/${this.props.project.video_url}?modestbranding=1&showinfo=0`}>
             </iframe>
           </section>
           <section className="project-page-backing">
