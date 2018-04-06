@@ -19,7 +19,7 @@ class Api::ProjectsController < ApplicationController
     @project.user_id = current_user.id
 
     if @project.save!
-      render "api/projects/create"
+      render "api/projects/show"
     else
       render json: @project.errors.full_messages, status: 422
     end

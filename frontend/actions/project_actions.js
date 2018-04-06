@@ -20,3 +20,10 @@ export const getAllProjects = () => dispatch => (
 export const getAProject = (id) => dispatch => (
   projectAPIUtil.requestProject(id).then(Currentproject => (dispatch(receiveProject(Currentproject))))
 );
+
+export const createProject = pokemon => dispatch => (
+  projectAPIUtil.createProject(pokemon).then(project => {
+    dispatch(receiveProject(project));
+    return project;
+  })
+);
