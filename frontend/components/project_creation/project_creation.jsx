@@ -21,6 +21,10 @@ class ProjectCreationForm extends React.Component {
     this.props.currentUser ? (null) : (this.redirect())
   }
 
+  componentDidMount() {
+    this.props.clearProjectErrors();
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.createProject(this.state)
