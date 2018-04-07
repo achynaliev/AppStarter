@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import ProjectCreationForm from './project_creation';
 import { createProject } from '../../actions/project_actions';
 
-const mapStateToProps = () => ({
+const mapStateToProps = (state) => ({
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
