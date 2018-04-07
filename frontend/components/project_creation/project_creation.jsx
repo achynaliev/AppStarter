@@ -17,6 +17,10 @@ class ProjectCreationForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillMount() {
+    this.props.currentUser ? (null) : (this.redirect())
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.createProject(this.state)
@@ -38,23 +42,12 @@ class ProjectCreationForm extends React.Component {
   }
 
   redirect() {
-    this.myrender()
-    sleep(2000);
     this.props.history.push('/login')
   }
-
-  // myrender() {
-  //   return (
-  //     <div>
-  //       <h1>HELLLO</h1>
-  //     <dvi>
-  //   );
-  // };
 
   render() {
     return (
       <section className="project-creation-main">
-        {this.props.currentUser ? (null) : (this.redirect())}
         <h1>Bring your creative project to life.</h1>
         <ul>
           {this.errors()}
