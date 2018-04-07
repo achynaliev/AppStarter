@@ -105,3 +105,10 @@ export default withRouter(ProjectCreationForm);
 //     return <option value={type} key={i}>{type}</option>;
 //   })}
 // </select>
+
+// <div className="project-creation-q1">
+//   <h1>We see Appstarter as a home for
+//     creative minds and a wonderful platform; where people who believe,
+//     respect, and see the vision can support an idea and make it a reality.</h1>
+//   <h2>— ATAI CHYNALIEV</h2>
+// </div>

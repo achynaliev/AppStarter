@@ -1,15 +1,99 @@
 .project-creation-main {
-  width: 80vw;
-  margin: 0 auto;
+  font-family: Helvetica;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background: url("https://s3-us-west-1.amazonaws.com/appstarter-chyna/art-artist-background-316466.jpg");
+  background-size: cover;
+
+  img {
+    width: 800px;
+    height: auto;
+  }
 
   h1 {
-    font-size: 40px;
+    margin-top: 40px;
+    font-size: 55px;
     font-weight: bolder;
+    padding-bottom: 30px;
+    color: #034750;
+  }
 
+  .project-creation-q1 {
+    width: 100vw;
+    margin-top: 50px;
+
+    h1 {
+      width: 60vw;
+      margin: 0 auto;
+      font-size: 45px;
+      font-weight: bolder;
+      color: white;
+      padding-top: 30px;
+      padding-bottom: 10px;
+      align-self: center;
+
+    }
+
+    h2 {
+      width: 10vw;
+      margin: 0 auto;
+      font-size: 16px;
+      font-weight: 500;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 22px;
+    }
   }
 
   form {
     display: flex;
     flex-direction: column;
+    padding-bottom: 220px;
+
+
+    input {
+      border: solid #009e73 1.5px;
+      width: 313px;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 42px;
+      margin-top: 25px;
+      text-align: left;
+      font-size: 15px;
+      border-radius: 10px;
+      color: #034750;
+    }
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #009e73;
+    opacity: 1; /* Firefox */
+    }
+
+    input:focus {
+      border: solid #034750 1.5px;
+    }
+
+    button {
+      background-color: #009e73;
+      border-color: $dark-blue;
+      color: white;
+      font-weight: normal;
+      // border-radius: 3px;
+      transition: background-color 0.3s;
+      font-family: $sans-serif;
+      font-size: 14px;
+      text-align: center;
+      width: 355px;
+      height: 45px;
+      border: 0px;
+      margin-top: 30px;
+      padding-left: 0px;
+      padding-right: 0px;
+      border-radius: 10px;
+    }
+
+
   }
 }
