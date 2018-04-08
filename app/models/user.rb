@@ -38,4 +38,12 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Project
 
+  has_many :backings,
+    foreign_key: :user_id,
+    class_name: :Backing
+
+  has_many :reward,
+    through: :backings,
+    source: :rewards
+
 end

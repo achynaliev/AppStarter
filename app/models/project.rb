@@ -13,4 +13,12 @@ class Project < ApplicationRecord
     through: :project_categories,
     source: :category
 
+  has_many :backings,
+    foreign_key: :project_id,
+    class_name: :Backing
+
+  has_many :rewards,
+    through: :backings,
+    source: :rewards
+
 end
