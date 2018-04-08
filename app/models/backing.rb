@@ -1,0 +1,2 @@
+class Backing < ApplicationRecord
+end
