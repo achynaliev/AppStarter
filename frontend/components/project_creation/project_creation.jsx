@@ -104,12 +104,10 @@ class ProjectCreationForm extends React.Component {
             />
             <select
               value={this.state.category}
-              onChange={this.update('category')}
-              defaultValue="tech"
-            >
-              {CATEGORIES.map((type, i) => {
-                return <option value={type} key={i}>{type}</option>;
-              })}
+              onChange={this.update('category')}>
+              <option value="tech">technology</option>
+              <option value="design">design</option>
+              <option value="gadets">gadets</option>
             </select>
           <button>Create a Project</button>
         </form>
