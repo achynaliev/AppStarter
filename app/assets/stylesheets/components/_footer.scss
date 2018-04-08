@@ -1,0 +1,34 @@
+.app-footer {
+  margin-top: 100px;
+  border-top: solid gray 1.5px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+
+  ul {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    li {
+
+      img {
+        padding-top: 20px;
+        width: 55px;
+        margin: auto;
+      }
+
+      h2 {
+        font-size: 15px;
+        color: black;
+        font-weight: 400;
+      }
+
+      h3 {
+        font-size: 14px;
+        font-weight: 100;
+        margin-bottom: -12px;
+      }
+    }
+  }
+}

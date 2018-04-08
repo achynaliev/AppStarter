@@ -15,6 +15,7 @@ import ProjectsIndexContainer from './projects/projects_index_container';
 import ProjectsMainpageIndex from './projects/mainpage_projects_container';
 import ProjectPageContainer from './project_view/project_page_container';
 import AppStaterStatsView from './totalstats/total_stats_main';
+import AppStaterFooter from './footer/footer';
 import ProjectCreationContainer from './project_creation/project_creation_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -33,6 +34,7 @@ const App = () => (
 
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
+    <AppStaterFooter />
   </div>
 );
 
