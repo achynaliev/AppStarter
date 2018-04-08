@@ -59,6 +59,24 @@
     flex-direction: column;
     padding-bottom: 220px;
 
+    select {
+      border: solid #009e73 1.5px;
+      width: 356px;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 44px;
+      margin-top: 25px;
+      text-align: left;
+      font-size: 15px;
+      border-radius: 15px;
+      color: #034750;
+      font-size: 17px;
+    }
+
+    select:focus {
+      border: solid #034750 1.5px;
+    }
+
 
     input {
       border: solid #009e73 1.5px;
@@ -71,11 +89,13 @@
       font-size: 15px;
       border-radius: 10px;
       color: #034750;
+      font-size: 17px;
     }
 
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #009e73;
     opacity: 1; /* Firefox */
+    font-size: 14px;
     }
 
     input:focus {

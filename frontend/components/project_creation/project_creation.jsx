@@ -2,6 +2,8 @@ import React from 'react';
 
 import { withRouter } from 'react-router-dom';
 
+const CATEGORIES = ['tech', 'design', 'gadets'];
+
 class ProjectCreationForm extends React.Component {
   constructor(props) {
     super(props);
@@ -12,7 +14,8 @@ class ProjectCreationForm extends React.Component {
       funding_goal: '',
       funding_end_date: '',
       image_url: '',
-      video_url: ''
+      video_url: '',
+      category: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -99,6 +102,15 @@ class ProjectCreationForm extends React.Component {
               placeholder="Campaign end date. yearmonthday(20190203)"
               onChange={this.update('funding_end_date')}
             />
+            <select
+              value={this.state.category}
+              onChange={this.update('category')}
+              defaultValue="tech"
+            >
+              {CATEGORIES.map((type, i) => {
+                return <option value={type} key={i}>{type}</option>;
+              })}
+            </select>
           <button>Create a Project</button>
         </form>
       </section>
@@ -107,20 +119,3 @@ class ProjectCreationForm extends React.Component {
 }
 
 export default withRouter(ProjectCreationForm);
-
-// <select
-//   value={this.state.short_description}
-//   onChange={this.update('short_description')}
-//   defaultValue="Select Pokemon Type"
-// >
-//   {POKEMON_TYPES.map((type, i) => {
-//     return <option value={type} key={i}>{type}</option>;
-//   })}
-// </select>
-
-// <div className="project-creation-q1">
-//   <h1>We see Appstarter as a home for
-//     creative minds and a wonderful platform; where people who believe,
-//     respect, and see the vision can support an idea and make it a reality.</h1>
-//   <h2>— ATAI CHYNALIEV</h2>
-// </div>
