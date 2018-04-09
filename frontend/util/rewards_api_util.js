@@ -1,6 +1,6 @@
 export const requestRewards = () => (
   $.ajax({
     method: 'GET',
-    url: '/api/reward'
+    url: '/api/rewards'
   })
 );
