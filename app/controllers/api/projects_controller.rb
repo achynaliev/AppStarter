@@ -7,6 +7,8 @@ class Api::ProjectsController < ApplicationController
 
   def show
     @project = Project.includes(:user).find(params[:id])
+    @backed = Backing.find_by(project_id: @project.id, user_id: current_user.id)
+    !!@backed
     render "api/projects/show"
   end
 
