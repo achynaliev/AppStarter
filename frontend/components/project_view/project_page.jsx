@@ -60,7 +60,7 @@ class ProjectViewPage extends React.Component {
                 {this.props.rewards.map( (reward) => <li key={`reard-${reward.id}`}>
                   <h3>{reward.title}</h3>
                   <h4>{reward.description}</h4>
-                  <button>{reward.pledge_amount}</button>
+                  <button>Pledge ${reward.pledge_amount}</button>
                 </li>)}
               </ul>
             </div>
