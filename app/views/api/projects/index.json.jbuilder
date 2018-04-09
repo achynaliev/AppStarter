@@ -4,6 +4,6 @@
     json.username project.user.username
     json.userId project.user.id
     # json.rewardsId []
-    # json.categories []
+    json.categories project.categories.pluck(:name)
   end
 end

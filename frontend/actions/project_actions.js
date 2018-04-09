@@ -47,3 +47,11 @@ export const createProject = project => dispatch => (
   }).fail(err => {dispatch(receiveProjectErrors(err.responseJSON)); return err;
   })
 );
+
+export const createBacking = backing => dispatch => (
+  projectAPIUtil.createBacking(backing).then(project => (dispatch(receiveProject(project)))
+));
+
+export const deleteBacking = id => dispatch => (
+  projectAPIUtil.deleteBacking(id).then(project => (dispatch(receiveProject(project)))
+));

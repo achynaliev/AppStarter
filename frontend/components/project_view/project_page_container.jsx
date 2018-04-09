@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ProjectViewPage from './project_page';
-import { getAProject } from '../../actions/project_actions';
+import { getAProject, createBacking, deleteBacking} from '../../actions/project_actions';
 import { getAllRewards } from '../../actions/reward_actions';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -11,7 +11,9 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   getAProject: id => dispatch(getAProject(id)),
-  getAllRewards: () => dispatch(getAllRewards())
+  getAllRewards: () => dispatch(getAllRewards()),
+  createBacking: project => dispatch(createBacking(project)),
+  deleteBacking: project => dispatch(deleteBacking(project))
 });
 
 export default connect(

@@ -8,7 +8,7 @@ const projectReducer = (state = {}, action ) => {
   let project;
   switch (action.type) {
     case RECEIVE_PROJECT:
-      return merge({}, state, action.currentProject);
+      return merge({}, action.currentProject);
     default:
       return state;
   }

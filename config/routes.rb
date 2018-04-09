@@ -8,6 +8,6 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :projects, only: [ :create, :index, :show, :update ]
     resources :rewards, only: [ :index ]
-    resources :backing, only: [ :create, :destroy ]
+    resources :backings, only: [ :create, :destroy ]
   end
 end

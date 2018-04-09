@@ -10,7 +10,7 @@ class Backing < ApplicationRecord
     class_name: :Reward
 
   belongs_to :projects,
-    foreign_key: :Project,
+    foreign_key: :project_id,
     class_name: :Project
 
 end

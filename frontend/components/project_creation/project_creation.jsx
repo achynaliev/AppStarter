@@ -15,7 +15,7 @@ class ProjectCreationForm extends React.Component {
       funding_end_date: '',
       image_url: '',
       video_url: '',
-      category: ''
+      category: 'tech'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }

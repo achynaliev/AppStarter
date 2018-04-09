@@ -92,6 +92,18 @@
       font-size: 17px;
     }
 
+    select::placeholder {
+      color: #009e73;
+      opacity: 1; /* Firefox */
+      font-size: 14px;
+    }
+
+    input::placeholder {
+      color: #009e73;
+      opacity: 1; /* Firefox */
+      font-size: 14px;
+    }
+
     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #009e73;
     opacity: 1; /* Firefox */

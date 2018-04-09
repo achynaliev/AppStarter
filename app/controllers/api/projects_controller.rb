@@ -1,17 +1,22 @@
 class Api::ProjectsController < ApplicationController
 
   def index
-    @projects = Project.includes(:user).all.limit(10)
+    @projects = Project.includes(:user).includes(:categories).all.limit(30)
+    # @category = @projects.categories.pluck(:id)
     render "api/projects/index"
   end
 
   def show
     @project = Project.includes(:user).find(params[:id])
-    @backed = false
+    @backed = [];
     if current_user
       @backed = Backing.find_by(project_id: @project.id, user_id: current_user.id)
+      if @backed == nil
+        @backed = []
+      else
+        @backed = [@backed.id, Reward.find_by(id: @backed.rewards).title, Reward.find_by(id: @backed.rewards).description]
+      end
     end
-    !!@backed
     render "api/projects/show"
   end
 
@@ -24,6 +29,7 @@ class Api::ProjectsController < ApplicationController
     @project.user_id = current_user.id
     if @project.save
       category = Category.find_by(name: project_params['category'])
+      debugger
       pr_cat = ProjectCategory.new(project_id: @project.id, category_id: category.id)
       pr_cat.save
       render "api/projects/show"
