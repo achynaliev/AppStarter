@@ -75,18 +75,31 @@ class ProjectViewPage extends React.Component {
             <section className="campaign-rewards">
               <h2>Support</h2>
               <div>
-                <ul className="rewardslist" ref={(ul) => { this.rewardslist = ul; }}>
-                  {(this.props.project.backings.length === 0) ?
-                    (this.props.rewards.map( (reward) => <li key={`reard-${reward.id}`}>
-                      <h3>{reward.title}</h3>
-                      <h4>{reward.description}</h4>
-                      <button className="pledge-button" onClick={() => this.handlePledge(reward.id) }>Pledge ${reward.pledge_amount}</button></li>)) :
-                    (<li>
-                      <h3>{this.props.project.backings[1]}</h3>
-                      <h4>{this.props.project.backings[2]}</h4>
-                      <button className="cancel-pledge-button" onClick={() => this.handleCancelPledge(this.props.project.backings[0]) }>Cancel pledge</button></li>)
-                  }
-                </ul>
+                {this.props.currentUser ? (
+                  <ul className="rewardslist" ref={(ul) => { this.rewardslist = ul; }}>
+                    {(this.props.project.backings.length === 0) ?
+                      (this.props.rewards.map( (reward) => <li key={`reard-${reward.id}`}>
+                        <h3>{reward.title}</h3>
+                        <h4>{reward.description}</h4>
+                        <button className="pledge-button" onClick={() => this.handlePledge(reward.id) }>Pledge ${reward.pledge_amount}</button></li>)) :
+                      (<li>
+                        <h3>{this.props.project.backings[1]}</h3>
+                        <h4>{this.props.project.backings[2]}</h4>
+                        <button className="cancel-pledge-button" onClick={() => this.handleCancelPledge(this.props.project.backings[0]) }>Cancel pledge</button></li>
+                      )
+                    }</ul>
+                ) : (
+                  <Link to="/login"><ul className="rewardslist" ref={(ul) => { this.rewardslist = ul; }}>
+                    {(this.props.project.backings.length === 0) ?
+                      (this.props.rewards.map( (reward) => <li key={`reard-${reward.id}`}>
+                        <h3>{reward.title}</h3>
+                        <h4>{reward.description}</h4>
+                        <button className="pledge-button" onClick={() => this.handlePledge(reward.id) }>Pledge ${reward.pledge_amount}</button></li>)) :
+                      (<li>
+                        <h3>{this.props.project.backings[1]}</h3>
+                        <h4>{this.props.project.backings[2]}</h4>
+                        <button className="cancel-pledge-button" onClick={() => this.handleCancelPledge(this.props.project.backings[0]) }>Cancel pledge</button></li>
+                      )}</ul></Link>)}
               </div>
             </section>
           </div>
