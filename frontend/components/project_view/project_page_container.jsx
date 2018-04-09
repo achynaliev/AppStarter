@@ -6,7 +6,7 @@ import { getAllRewards } from '../../actions/reward_actions';
 const mapStateToProps = (state, ownProps) => ({
   project: state.entities.currentProject,
   projectId: ownProps.match.params.projectid,
-  rewards: state.entities.rewards
+  rewards: Object.values(state.entities.rewards)
 });
 
 const mapDispatchToProps = (dispatch) => ({
