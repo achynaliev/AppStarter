@@ -7,8 +7,8 @@ export const receiveAllRewards = rewards => ({
   rewards
 });
 
-export const getAllRewards = rewards = dispatch => (
-  rewardsAPIUtil.requestRewards().then( rewards => (
+export const getAllRewards = () => dispatch => (
+  rewardsAPIUtil.requestRewards().then(rewards => (
     dispatch(receiveAllRewards(rewards))
   ))
 );
