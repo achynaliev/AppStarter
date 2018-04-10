@@ -261,7 +261,7 @@ Reward.create(pledge_amount: 99, description: "diamond reward", title: "diamond 
 
 Category.create(name: 'tech')
 Category.create(name: 'design')
-Category.create(name: 'gadets')
+Category.create(name: 'gadgets')
 
 ProjectCategory.create(project_id: 1, category_id: 1)
 ProjectCategory.create(project_id: 10, category_id: 1)

@@ -30,7 +30,7 @@ class ProjectsIndex extends React.Component {
               <option value="all">all</option>
               <option value="tech">technology</option>
               <option value="design">design</option>
-              <option value="gadets">gadets</option>
+              <option value="gadgets">gadgets</option>
             </select>    projects on earth</h2>
           </div>
         {this.state.category === 'all' ?

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { withRouter } from 'react-router-dom';
 
-const CATEGORIES = ['tech', 'design', 'gadets'];
+const CATEGORIES = ['tech', 'design', 'gadgets'];
 
 class ProjectCreationForm extends React.Component {
   constructor(props) {
@@ -107,7 +107,7 @@ class ProjectCreationForm extends React.Component {
               onChange={this.update('category')}>
               <option value="tech">technology</option>
               <option value="design">design</option>
-              <option value="gadets">gadets</option>
+              <option value="gadgets">gadgets</option>
             </select>
           <button>Create a Project</button>
         </form>

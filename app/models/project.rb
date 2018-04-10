@@ -21,4 +21,10 @@ class Project < ApplicationRecord
     through: :backings,
     source: :rewards
 
+  def self.search_project(query)
+    query = "%" + query.downcase + "%"
+    search_result = Project.where('
+      lower(title) LIKE ? or lower(short_description) LIKE ?', query, query)
+  end
+
 end

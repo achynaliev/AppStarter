@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     resources :projects, only: [ :create, :index, :show, :update ]
     resources :rewards, only: [ :index ]
     resources :backings, only: [ :create, :destroy ]
+    resources :project_searches, only: [ :index ]
   end
 end
