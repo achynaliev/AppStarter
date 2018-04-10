@@ -1,7 +1,7 @@
 class Api::ProjectsController < ApplicationController
 
   def index
-    @projects = Project.includes(:user).includes(:categories).all.limit(30)
+    @projects = Project.includes(:user).includes(:categories).all.limit(27)
     # @category = @projects.categories.pluck(:id)
     render "api/projects/index"
   end

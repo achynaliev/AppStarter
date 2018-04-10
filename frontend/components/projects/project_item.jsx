@@ -7,6 +7,18 @@ class ProjectItemView extends React.Component {
 
   }
 
+  category() {
+    let category = '';
+    if (this.props.project.categories[0] === "tech") {
+      category = "Technology";
+    } else if (this.props.project.categories[0] === "design") {
+      category = "Design";
+    } else {
+      category = "Gadgets"
+    }
+    return category
+  }
+
   render() {
     return (
       <li>
@@ -21,7 +33,7 @@ class ProjectItemView extends React.Component {
             <h3>$86,260  pledged</h3>
             <h4>862% funded</h4>
             <h4>20days to go</h4>
-            <h5>Gadgets</h5>
+            <h5>{this.category()}</h5>
           </div>
         </section>
         </Link>
