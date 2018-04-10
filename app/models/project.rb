@@ -22,7 +22,7 @@ class Project < ApplicationRecord
     source: :rewards
 
   def self.search_project(query)
-    query = "%" + query.downcase + "%"
+    query = "%" + query.to_s.downcase + "%"
     search_result = Project.where('
       lower(title) LIKE ? or lower(short_description) LIKE ?', query, query)
   end

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Greeting from './greeting_container';
+import SearchComponent from '../search/search_index';
 
 class NavBar extends React.Component {
   constructor(props) {

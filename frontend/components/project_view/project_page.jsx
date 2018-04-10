@@ -8,8 +8,6 @@ class ProjectViewPage extends React.Component {
     super(props);
   }
 
-
-
   componentDidMount() {
     this.props.getAProject(this.props.projectId);
     this.props.getAllRewards();
