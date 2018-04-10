@@ -30,7 +30,6 @@ class ProjectViewPage extends React.Component {
 
   render() {
     if (this.props.project.backings) {
-      console.log(this.props.project.backings[0]);
       return (
         <section className="project-page-view">
           <div className="project-view-header">
