@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { fetchSearchResults } from '../../util/search_api_util';
+import c3 from 'c3';
 
 class SearchComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchQuery: "",
+      searchQuery: ""
     };
 
     this.update = this.update.bind(this);
@@ -20,40 +21,40 @@ class SearchComponent extends React.Component {
   }
 
   handleSearch() {
-    console.log(this.state.searchQuery);
     this.props.getSearchResult(this.state.searchQuery);
   }
-
 
   render() {
     let projects = Object.values(this.props.projects);
     return (
-      <section className="search-main">
-        <div className="search-field">
-        <input
-          type="text"
-          value={this.state.searchQuery}
-          onInput={this.update('searchQuery')}
-          placeholder="Search for projects"
-          />
-        </div>
-        <div className="search-result-list">
-          <ul>
-            {projects.length === 0 ? (null) :
-              (projects.map( (project) =>
-              <div key={`project-${project.id}`}>
-              {<Link to={`/projects/${project.id}`}>
-                <li>
-                  <img src={project.image_url}/>
-                  <div>
-                    <h2>{project.title}</h2>
-                    <h3>{project.short_description}</h3>
-                  </div>
-                </li>
-              </Link>}
-            </div>))
-            }
-          </ul>
+      <section className="searchmain">
+        <div className="searchmain__searchmain" ref="searchmain">
+          <div className="search-field">
+            <input
+              type="text"
+              value={this.state.searchQuery}
+              onInput={this.update('searchQuery')}
+              placeholder="Search for projects"
+              />
+          </div>
+          <div className="search-result-list">
+            <ul>
+              {projects.length === 0 ? (null) :
+                (projects.map( (project) =>
+                <div key={`project-${project.id}`}>
+                {<Link to={`/projects/${project.id}`}>
+                  <li>
+                    <img src={project.image_url}/>
+                    <div>
+                      <h2>{project.title}</h2>
+                      <h3>{project.short_description}</h3>
+                    </div>
+                  </li>
+                </Link>}
+              </div>))
+              }
+            </ul>
+          </div>
         </div>
       </section>
     )
