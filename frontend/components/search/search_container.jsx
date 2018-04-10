@@ -4,7 +4,7 @@ import { getSearchResult } from '../../actions/search_actions';
 import { getAllRewards } from '../../actions/reward_actions';
 
 const mapStateToProps = (state) => ({
-  project: state.entities.searchResults,
+  projects: state.entities.searchResults,
 });
 
 const mapDispatchToProps = dispatch => ({
