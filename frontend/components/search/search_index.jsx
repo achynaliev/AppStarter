@@ -8,11 +8,14 @@ class SearchComponent extends React.Component {
     this.state = {
       searchQuery: "",
     };
+
+    this.update = this.update.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
-  componentDidMount() {
-    this.props.getSearchResult(this.state.searchQuery);
-  }
+  // componentDidMount() {
+  //   this.props.getSearchResult(this.state.searchQuery);
+  // }
   // componentWillReceiveProps() {
   //   this.props.getSearchResult(this.state.searchQuery);
   // }
@@ -20,7 +23,7 @@ class SearchComponent extends React.Component {
   // shouldComponentUpdate() {
   //   // fetchSearchResults(this.state.searchQuery).then( searchResults =>
   //   // this.setState({searchResults}))
-  //   this.props.getSearchResult(this.state.searchQuery);
+  //   // this.props.getSearchResult(this.state.searchQuery);
   //   return true
   // }
 
@@ -31,8 +34,16 @@ class SearchComponent extends React.Component {
   // }
 
   update(property) {
-    return e => this.setState({ [property]: e.target.value })
+    return e => {
+      this.setState({ [property]: e.target.value }, this.handleSearch)
+    }
   }
+
+  handleSearch() {
+    console.log(this.state.searchQuery);
+    this.props.getSearchResult(this.state.searchQuery);
+  }
+
 
   render() {
     console.log(this.state.searchQuery)
