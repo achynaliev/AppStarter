@@ -4,7 +4,7 @@
   border-bottom: solid lightgray 0.5px;
   position: absolute;
   z-index: 2;
-  background-color: white;
+  background-color: #DDF2EB;
   top: 0;
 
   .search-field {
@@ -30,14 +30,14 @@
 
   .search-result-list {
     min-width: 800px;
-    background-color: white;
+    background-color: #DDF2EB;
 
     ul {
       display: flex;
       flex-direction: column;
 
       li {
-        border-top: solid lightgray 0.5px;
+        border-top: solid gray 0.5px;
         width: 100vw;
         height: 100px;
         display: flex;
