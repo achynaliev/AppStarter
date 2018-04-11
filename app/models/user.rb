@@ -46,4 +46,12 @@ class User < ApplicationRecord
     through: :backings,
     source: :rewards
 
+  has_many :likes,
+    foreign_key: :user_id,
+    class_name: :Like
+
+  has_many :liked_projects,
+    through: :likes,
+    source: :project
+
 end

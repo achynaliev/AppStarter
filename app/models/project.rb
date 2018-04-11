@@ -21,6 +21,14 @@ class Project < ApplicationRecord
     through: :backings,
     source: :rewards
 
+  has_many :likes,
+    foreign_key: :project_id,
+    class_name: :Like
+
+  has_many :likers,
+    through: :likes,
+    source: :user
+
   def self.search_project(query)
     query = "%" + query.to_s.downcase + "%"
     search_result = Project.where('
