@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     resources :rewards, only: [ :index ]
     resources :backings, only: [ :create, :destroy ]
     resources :project_searches, only: [ :index ]
+    resources :likes, only: [ :create, :destroy ]
   end
 end
