@@ -25,9 +25,6 @@ class ProjectViewPage extends React.Component {
     this.props.deleteBacking(backingId);
   }
 
-
-
-
   render() {
     if (this.props.project.backings) {
       return (
