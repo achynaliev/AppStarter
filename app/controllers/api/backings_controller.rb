@@ -4,7 +4,7 @@ class Api::BackingsController < ApplicationController
     @backing.user_id = current_user.id
 
     if @backing.save
-      @project = Project.includes(:user).find(@backing.project_id);
+      @project = Project.includes(:user).find(@backing.project_id)
       @backed = [];
       if current_user
         @backed = Backing.find_by(project_id: @project.id, user_id: current_user.id)
@@ -23,11 +23,13 @@ class Api::BackingsController < ApplicationController
 
   def destroy
     @backing = Backing.find(params[:id])
-    @project = Project.includes(:user).find(@backing.project_id);
+    @project = Project.includes(:user).find(@backing.project_id)
     @backed = [];
     @backing.destroy
     render "api/backing/show"
   end
+
+  private
 
   def backings_params
     params.require(:backing).permit(:reward_id, :project_id)
