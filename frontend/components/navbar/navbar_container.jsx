@@ -3,6 +3,7 @@ import { logout } from '../../actions/session_actions';
 import React from 'react';
 import NavBar from './navbar';
 import { Link } from 'react-router-dom';
+import { setSearchUITrue, setSearchUIFalse} from '../../actions/search_ui_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -12,7 +13,9 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
+  setSearchUITrue: () => dispatch(setSearchUITrue()),
+  setSearchUIFalse: () => dispatch(setSearchUIFalse())
 });
 
 export default connect(

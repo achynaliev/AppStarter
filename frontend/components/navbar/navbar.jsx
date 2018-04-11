@@ -15,6 +15,10 @@ class NavBar extends React.Component {
     this.closeSearchDisplay = this.closeSearchDisplay.bind(this);
   }
 
+  componentWillMount() {
+    this.props.setSearchUITrue();
+  }
+
   displaySearch() {
     if (this.state.showSearch) {
       return (<SearchContainer />);
