@@ -35,6 +35,7 @@ class SearchComponent extends React.Component {
               value={this.state.searchQuery}
               onInput={this.update('searchQuery')}
               placeholder="Search for projects"
+              autoFocus
               />
           </div>
           <div className="search-result-list">
