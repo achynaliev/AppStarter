@@ -20,6 +20,7 @@ import ProjectCreationContainer from './project_creation/project_creation_contai
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SearchContainer from './search/search_container';
 import RecommendedProjects from './projects/recommended/recommended_projects_container';
+import LastReading from './reading/reading_last';
 
 const App = () => (
   <div>
@@ -32,6 +33,7 @@ const App = () => (
     <Route exact path="/projects/:projectid" component={ProjectPageContainer}/>
     <Route exact path="/" component={ProjectsMainpageIndex}/>
     <Route exact path="/" component={RecommendedProjects}/>
+    <Route exact path="/" component={LastReading}/>
     <Route exact path="/explore" component={ProjectsIndexContainer}/>
     </main>
 

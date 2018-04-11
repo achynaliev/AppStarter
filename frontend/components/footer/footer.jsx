@@ -14,12 +14,12 @@ class AppStaterFooter extends React.Component {
         <div className="footer-links">
           <ul>
             <li>
-              <a href="https://github.com/achynaliev">
+              <a style={{display: "table-cell"}} target="_blank" href="https://github.com/achynaliev">
               <img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/github-logo.png"></img>
                 </a>
             </li>
             <li>
-              <a href="https://github.com/achynaliev">
+              <a style={{display: "table-cell"}} target="_blank" href="https://github.com/achynaliev">
               <h2>ABOUT</h2>
               <h3>About us</h3>
               <h3>Our charter</h3>
@@ -29,7 +29,7 @@ class AppStaterFooter extends React.Component {
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/achynaliev/">
+              <a style={{display: "table-cell"}} target="_blank" href="https://www.linkedin.com/in/achynaliev/">
               <h2>SUPPORT</h2>
               <h3>Help Center</h3>
               <h3>Contact</h3>
@@ -40,7 +40,7 @@ class AppStaterFooter extends React.Component {
               </a>
             </li>
             <li>
-              <a href="https://github.com/achynaliev">
+              <a style={{display: "table-cell"}} target="_blank" href="https://github.com/achynaliev">
               <h2>HELLO</h2>
               <h3>Kickstarter Blog</h3>
               <h3>Engineering Blog</h3>
@@ -48,7 +48,7 @@ class AppStaterFooter extends React.Component {
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/achynaliev/">
+              <a style={{display: "table-cell"}} target="_blank" href="https://www.linkedin.com/in/achynaliev/">
               <h2>MORE FROM KICKSTARTER</h2>
               <h3>Drip</h3>
               <h3>Kickstarter Live</h3>
@@ -56,7 +56,7 @@ class AppStaterFooter extends React.Component {
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/achynaliev/">
+              <a style={{display: "table-cell"}} target="_blank" href="https://www.linkedin.com/in/achynaliev/">
               <img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/linked.png"></img>
               </a>
             </li>

@@ -2,8 +2,8 @@
   width: 100vw;
   font-family: Helvetica;
   margin: 0 auto;
-  padding-top: 40px;
-  margin-bottom: 200px;
+  padding-top: 50px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   border-top: solid gray 0.5px;
@@ -25,15 +25,15 @@
   }
 
   ul {
-    padding-top: 22px;
+    padding-top: 30px;
     width: 80vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 
     img {
-      width: 285px;
-      height: 165px;
+      width: 270px;
+      height: 160px;
       object-fit: cover;
     }
 

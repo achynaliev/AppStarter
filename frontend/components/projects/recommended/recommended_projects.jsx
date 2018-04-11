@@ -20,7 +20,7 @@ class RecommendedProjects extends React.Component {
         </div>
         <ul>
           {this.props.projects.map( (project, i) => i > 15 && i < 20 ?
-            <Link to={`/projects/${project.id}`}><li key={`project-${project.id}`}>
+            <Link to={`/projects/${project.id}`} key={`project-${project.id}`}><li>
             <img src={project.image_url}/>
             <h3>{project.title}</h3>
           </li></Link> : null)}

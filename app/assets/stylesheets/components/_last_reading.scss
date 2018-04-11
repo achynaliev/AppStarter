@@ -1,0 +1,38 @@
+.mainpage-last-reading {
+  display: flex;
+  justify-content: center;
+  width: 70vw;
+  margin: 0 auto;
+  font-family: Helvetica;
+  padding-bottom: 70px;
+  padding-top: 50px;
+
+  h1 {
+    width: 60vw;
+    font-size: 45px;
+    font-weight: lighter;
+    padding-bottom: 15px;
+  }
+
+  h5 {
+    margin-top: -12px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 13px;
+    font-weight: 100;
+  }
+
+  h4:hover {
+    color: #009e74;
+    text-decoration: underline;
+  }
+
+  h5:hover {
+    color: #009e74;
+    text-decoration: underline;
+  }
+
+}
