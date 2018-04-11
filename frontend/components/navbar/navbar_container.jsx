@@ -5,12 +5,9 @@ import NavBar from './navbar';
 import { Link } from 'react-router-dom';
 import { setSearchUITrue, setSearchUIFalse} from '../../actions/search_ui_actions';
 
-const mapStateToProps = (state) => {
-  return {
-    exploreLink: <Link to="/explore">Explore</Link>,
-    startProject: <Link to="/project/new">Start a project</Link>
-  };
-};
+const mapStateToProps = (state) => ({
+  searchState: state.ui.searchState
+})
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),

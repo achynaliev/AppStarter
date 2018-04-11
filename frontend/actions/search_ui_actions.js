@@ -6,5 +6,5 @@ export const setSearchUITrue = () => ({
 })
 
 export const setSearchUIFalse = () => ({
-  type: SET_SEARCH_UI_TRUE,
+  type: SET_SEARCH_UI_FALSE,
 })

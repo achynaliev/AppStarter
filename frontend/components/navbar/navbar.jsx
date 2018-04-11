@@ -15,12 +15,12 @@ class NavBar extends React.Component {
     this.closeSearchDisplay = this.closeSearchDisplay.bind(this);
   }
 
-  componentWillMount() {
-    this.props.setSearchUITrue();
+  componentDidMount() {
+    this.props.setSearchUIFalse();
   }
 
   displaySearch() {
-    if (this.state.showSearch) {
+    if (this.props.searchState) {
       return (<SearchContainer />);
     } else {
       return <div></div>;
@@ -28,7 +28,7 @@ class NavBar extends React.Component {
   }
 
   dislayXmark() {
-    if (this.state.showSearch) {
+    if (this.props.searchState) {
       return (<a className="searchxmark" onClick={this.closeSearchDisplay}>X</a>);
     } else {
       return <div></div>;
@@ -36,19 +36,19 @@ class NavBar extends React.Component {
   }
 
   openSearchDisplay() {
-    this.setState({ showSearch: true });
+    this.props.setSearchUITrue();
   }
 
   closeSearchDisplay() {
-    this.setState({ showSearch: false })
+    this.props.setSearchUIFalse();
   }
 
   render() {
     return (
       <nav>
         <section className="leftnavbar">
-          {this.props.exploreLink}
-          {this.props.startProject}
+          <Link to="/explore">Explore</Link>
+          <Link to="/project/new">Start a project</Link>
         </section>
         <section className="midNavbar">
           <h2>{<Link to="/">APPSTARTER</Link>}</h2>
