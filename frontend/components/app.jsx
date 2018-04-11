@@ -19,6 +19,7 @@ import AppStaterFooter from './footer/footer';
 import ProjectCreationContainer from './project_creation/project_creation_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SearchContainer from './search/search_container';
+import RecommendedProjects from './projects/recommended/recommended_projects_container';
 
 const App = () => (
   <div>
@@ -27,10 +28,10 @@ const App = () => (
     <Route exact path="/" component={AppStaterStatsView}/>
     </header>
     <main>
-    <Route exact path="/search" component={SearchContainer}/>
     <Route exact path="/project/new" component={ProjectCreationContainer}/>
     <Route exact path="/projects/:projectid" component={ProjectPageContainer}/>
     <Route exact path="/" component={ProjectsMainpageIndex}/>
+    <Route exact path="/" component={RecommendedProjects}/>
     <Route exact path="/explore" component={ProjectsIndexContainer}/>
     </main>
 

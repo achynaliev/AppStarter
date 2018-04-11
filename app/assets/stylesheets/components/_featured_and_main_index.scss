@@ -7,14 +7,25 @@
   .mainpage-categories {
     display: flex;
     justify-content: space-around;
+    padding-top: 25px;
+    border-bottom: solid lightgray 1px;
+    padding-bottom: 5px;
 
-    a {
+      a {
+        font-size: 16px;
+        font-weight: 200;
+        color: gray;
+      }
 
-    }
+      a:hover {
+        font-size: 16px;
+        font-weight: 200;
+        color: black;
+      }
   }
 
   .featured-and-index {
-    padding-top: 30px;
+    padding-top: 40px;
     display: flex;
     justify-content: space-between;
     width: 75vw;
@@ -22,7 +33,7 @@
     margin: 0 auto;
     font-family: Helvetica;
     font-weight: lighter;
-    margin-bottom: 200px;
+    margin-bottom: 40px;
 
     .FeaturedProject {
 

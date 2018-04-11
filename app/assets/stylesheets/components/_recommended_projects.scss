@@ -1,0 +1,51 @@
+.mainpage-recommened_projects {
+  width: 100vw;
+  font-family: Helvetica;
+  margin: 0 auto;
+  padding-top: 40px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  border-top: solid gray 0.5px;
+  border-bottom: solid gray 0.5px;
+  padding-bottom: 40px;
+
+  div {
+    width: 80vw;
+    margin: 0 auto;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    h2 {
+      font-size: 20px;
+      font-weight: lighter;
+    }
+  }
+
+  ul {
+    padding-top: 22px;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 285px;
+      height: 165px;
+      object-fit: cover;
+    }
+
+    h3 {
+      width: 280px;
+      font-size: 15px;
+      font-weight: lighter;
+    }
+
+    H3:hover {
+      color: #009e74;
+      text-decoration: underline;
+    }
+  }
+}

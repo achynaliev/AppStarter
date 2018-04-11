@@ -64,10 +64,10 @@ class ProjectsMainpageIndex extends React.Component {
     return (
       <div className="mainpage-projects-categories">
         <section className="mainpage-categories">
-          <a onClick={() => this.handlecategory("all")}>all</a>
-          <a onClick={() => this.handlecategory("tech")}>technology</a>
-          <a onClick={() => this.handlecategory("design")}>design</a>
-          <a onClick={() => this.handlecategory("gadgets")}>gadgets</a>
+          <a onClick={() => this.handlecategory("all")}>All</a>
+          <a onClick={() => this.handlecategory("tech")}>Technology</a>
+          <a onClick={() => this.handlecategory("design")}>Design</a>
+          <a onClick={() => this.handlecategory("gadgets")}>Gadgets</a>
         </section>
         {this.state.category === 'all' ? (this.renderall()) : (this.renderCategory())}
       </div>
