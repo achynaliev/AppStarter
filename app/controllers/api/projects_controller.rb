@@ -29,7 +29,6 @@ class Api::ProjectsController < ApplicationController
     @project.user_id = current_user.id
     if @project.save
       category = Category.find_by(name: project_params['category'])
-      debugger
       pr_cat = ProjectCategory.new(project_id: @project.id, category_id: category.id)
       pr_cat.save
       render "api/projects/show"
