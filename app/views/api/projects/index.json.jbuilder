@@ -5,5 +5,10 @@
     json.userId project.user.id
     # json.rewardsId []
     json.categories project.categories.pluck(:name)
+    if @current_user
+      json.likeId project.liked_by_current_user(@current_user.id)
+    else
+      json.likeId []
+    end
   end
 end

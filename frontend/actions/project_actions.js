@@ -4,6 +4,7 @@ export const RECEIVE_ALL_PROJECTS = 'RECEIVE_ALL_PROJECTS';
 export const RECEIVE_PROJECT = 'RECEIVE_PROJECT';
 export const RECEIVE_PROJECT_ERRORS = 'RECEIVE_PROJECT_ERRORS';
 export const CLEAR_PROJECT_ERRORS = 'CLEAR_PROJECT_ERRORS';
+export const RECEIVE_LIKE = 'RECEIVE_LIKE';
 
 export const receiveAllProjects = projects => ({
   type: RECEIVE_ALL_PROJECTS,
@@ -15,6 +16,11 @@ export const receiveProject = currentProject => ({
   currentProject
 });
 
+export const receiveLike = currentProject => ({
+  type: RECEIVE_LIKE,
+  currentProject
+});
+
 export const clearProjectErrors = () => ({
   type: CLEAR_PROJECT_ERRORS,
 });
@@ -23,6 +29,12 @@ export const receiveProjectErrors = errors => ({
   type: RECEIVE_PROJECT_ERRORS,
   errors
 });
+
+export const receiveLikeIndex = (project_id) => dispatch => (
+  rewardsAPIUtil.createLike(project_id).then(projects => (
+    dispatch(receiveAllProjects(projects))
+  ))
+);
 
 export const getAllProjects = () => dispatch => (
   projectAPIUtil.requestProjects().then(projects => (
@@ -39,6 +51,12 @@ export const getAProject = (id) => dispatch => (
 //     dispatch(receiveProject(project))) ,(err => dispatch(receiveProjectErrors(err.responseJSON))
 //   ))
 // );
+
+export const createLike = (project_id) => dispatch => (
+  projectAPIUtil.createLike(project_id).then(like => (
+    dispatch(receiveLike(like))
+  ))
+);
 
 export const createProject = project => dispatch => (
   projectAPIUtil.createProject(project).then(project => {

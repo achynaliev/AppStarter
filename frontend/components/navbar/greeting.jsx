@@ -17,6 +17,7 @@ class Greeting extends React.Component {
   }
 
   render() {
+    console.log(this.props.location)
     return (
       <div>
       {this.props.currentUser ? (<a className="nav-logout" onClick={() => this.logoutUser() }>Log out</a>) : (<Link to="/login">Login</Link>)}

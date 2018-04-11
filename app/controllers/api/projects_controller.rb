@@ -3,6 +3,7 @@ class Api::ProjectsController < ApplicationController
   def index
     @projects = Project.includes(:user).includes(:categories).all.limit(27)
     # @category = @projects.categories.pluck(:id)
+    @current_user = current_user
     render "api/projects/index"
   end
 
@@ -17,6 +18,7 @@ class Api::ProjectsController < ApplicationController
         @backed = [@backed.id, Reward.find_by(id: @backed.rewards).title, Reward.find_by(id: @backed.rewards).description]
       end
     end
+    @current_user = current_user
     render "api/projects/show"
   end
 

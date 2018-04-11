@@ -35,4 +35,13 @@ class Project < ApplicationRecord
       lower(title) LIKE ? or lower(short_description) LIKE ?', query, query)
   end
 
+  def liked_by_current_user(id)
+    like = Like.find_by(user_id: id, project_id: self.id)
+    if like
+      return [like.id]
+    else
+      return []
+    end
+  end
+
 end

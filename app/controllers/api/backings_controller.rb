@@ -15,6 +15,7 @@ class Api::BackingsController < ApplicationController
         end
       end
       @backed
+      @current_user = current_user
       render "api/backing/show"
     else
       render json: @backing.errors.full_messages, status: 422
