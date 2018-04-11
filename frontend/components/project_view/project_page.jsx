@@ -12,6 +12,7 @@ class ProjectViewPage extends React.Component {
     this.props.getAProject(this.props.projectId);
     this.props.getAllRewards();
     this.props.setSearchUIFalse();
+    this.props.clearSearchResults();
     scrollToComponent(this.refs.name);
   }
 

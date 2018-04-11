@@ -41,6 +41,7 @@ class NavBar extends React.Component {
 
   closeSearchDisplay() {
     this.props.setSearchUIFalse();
+    this.props.clearSearchResults();
   }
 
   render() {
