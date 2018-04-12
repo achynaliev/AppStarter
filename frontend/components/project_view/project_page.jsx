@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { createBacking, deleteBacking } from '../../util/backing_api_util';
 import scrollToComponent from 'react-scroll-to-component';
+import Alert from 'react-s-alert';
+// import 'react-s-alert/dist/s-alert-default.css';
 
 class ProjectViewPage extends React.Component {
   constructor(props) {
@@ -31,7 +33,17 @@ class ProjectViewPage extends React.Component {
   }
 
   handleLike() {
-    this.props.createLike(this.props.project.id)
+    if (this.props.currentUser) {
+      this.props.createLike(this.props.project.id)
+    } else {
+      window.alert("Please login")
+      // Alert.info('Test message 2', {
+      //       position: 'bottom-left',
+      //       effect: 'bouncyflip',
+      //       timeout: 'none'
+      // });
+    }
+
   }
 
   cancelLike() {

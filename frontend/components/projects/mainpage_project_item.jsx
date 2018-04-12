@@ -9,7 +9,16 @@ class ProjectMainpageItem extends React.Component {
   }
 
   handleLike() {
-    this.props.createLikeIndex(this.props.project.id)
+    if (this.props.currentUser) {
+      this.props.createLike(this.props.project.id)
+    } else {
+      window.alert("Please login")
+      // Alert.info('Test message 2', {
+      //       position: 'bottom-left',
+      //       effect: 'bouncyflip',
+      //       timeout: 'none'
+      // });
+    }
   }
 
   cancelLike() {
