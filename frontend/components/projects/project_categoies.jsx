@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ProjectItemView from './project_item';
+import ProjectItemView from './explore_item_container';
 
 export const AllProjectCategories = ({projects, category}) => (
       <section>

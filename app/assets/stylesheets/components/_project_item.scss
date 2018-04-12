@@ -37,7 +37,25 @@
       padding-right: 30px;
       padding-top: 35px;
 
+      .featured_like {
+        position: absolute;
+        width: inherit;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1;
+
+        img {
+          padding-top: 20px;
+          padding-right: 20px;
+          width: 35px;
+          height: 35px;
+          z-index: 1;
+        }
+      }
+
+
       .ProjectItemView {
+          position: relative;
           min-width: 300px;
           width: 100%;
           border: solid lightgrey 1px;
