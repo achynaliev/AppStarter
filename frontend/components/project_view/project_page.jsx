@@ -59,7 +59,7 @@ class ProjectViewPage extends React.Component {
             <section className="project-page-backing">
               <h2>${this.props.project.total_pledged}</h2>
               <h5 className='project-backing-h5'>pledged of $50,000 goal</h5>
-              <h3>23</h3>
+              <h3>{this.props.project.num_backers}</h3>
               <h4>backers</h4>
               <h3>20</h3>
               <h4>days to go</h4>

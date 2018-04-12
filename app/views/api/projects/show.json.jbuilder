@@ -4,6 +4,7 @@ json.username @project.user.username
 json.backings @backed
 json.categories @project.categories.pluck(:name)
 json.total_pledged @total_pledged
+json.num_backers @num_backers
 if @current_user
   json.likeId @project.liked_by_current_user(@current_user.id)
 else

@@ -15,6 +15,7 @@ class Api::BackingsController < ApplicationController
         end
       end
       @backed
+      @num_backers = @project.backings.count + 23
       @current_user = current_user
       @total_pledged = Project.total_pledged(@project.id)
       render "api/backing/show"
@@ -29,6 +30,8 @@ class Api::BackingsController < ApplicationController
     @backed = [];
     @backing.destroy
     @total_pledged = Project.total_pledged(@project.id)
+    @num_backers = @project.backings.count + 23
+    @current_user = current_user
     render "api/backing/show"
   end
 
