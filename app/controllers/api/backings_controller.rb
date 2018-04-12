@@ -16,6 +16,7 @@ class Api::BackingsController < ApplicationController
       end
       @backed
       @current_user = current_user
+      @total_pledged = Project.total_pledged(@project.id)
       render "api/backing/show"
     else
       render json: @backing.errors.full_messages, status: 422
@@ -27,6 +28,7 @@ class Api::BackingsController < ApplicationController
     @project = Project.includes(:user).find(@backing.project_id)
     @backed = [];
     @backing.destroy
+    @total_pledged = Project.total_pledged(@project.id)
     render "api/backing/show"
   end
 

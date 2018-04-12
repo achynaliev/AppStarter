@@ -3,6 +3,7 @@ json.extract! @project, :id, :title, :short_description, :full_description, :fun
 json.username @project.user.username
 json.backings @backed
 json.categories @project.categories.pluck(:name)
+json.total_pledged @total_pledged
 if @current_user
   json.likeId @project.liked_by_current_user(@current_user.id)
 else

@@ -19,6 +19,7 @@ class Api::ProjectsController < ApplicationController
       end
     end
     @current_user = current_user
+    @total_pledged = Project.total_pledged(@project.id)
     render "api/projects/show"
   end
 

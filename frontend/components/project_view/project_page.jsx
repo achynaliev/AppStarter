@@ -57,8 +57,8 @@ class ProjectViewPage extends React.Component {
               </iframe>
             </section>
             <section className="project-page-backing">
-              <h2>$46,842</h2>
-              <h5 className='project-backing-h5'>pledged of $9,242 goal</h5>
+              <h2>${this.props.project.total_pledged}</h2>
+              <h5 className='project-backing-h5'>pledged of $50,000 goal</h5>
               <h3>23</h3>
               <h4>backers</h4>
               <h3>20</h3>

@@ -13,8 +13,9 @@ class Api::LikesController < ApplicationController
         else
           backings_id = backings.first.id
           reward = Reward.find(backings.first.reward_id)
-          @backed =[backings_id, reward.title, reward.full_description]
+          @backed =[backings_id, reward.title, reward.description]
         end
+        @total_pledged = Project.total_pledged(@project.id)
         render "api/likes/show"
       end
     else
@@ -36,8 +37,9 @@ class Api::LikesController < ApplicationController
     else
       backings_id = backings.first.id
       reward = Reward.find(backings.first.reward_id)
-      @backed =[backings_id, reward.title, reward.full_description]
+      @backed =[backings_id, reward.title, reward.description]
     end
+    @total_pledged = Project.total_pledged(@project.id)
     @current_user = current_user
     render "api/likes/show"
   end
