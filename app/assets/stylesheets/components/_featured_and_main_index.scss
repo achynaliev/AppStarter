@@ -37,52 +37,69 @@
     margin-bottom: 40px;
 
     .FeaturedProject {
-
       position: relative;
 
-      img {
-        width: 600px;
-        height: 600px;
-        object-fit: cover;
-      }
+        .featured_like {
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
 
-      h4 {
-        position: absolute;
-        z-index: 1;
-        bottom: 90px;
-        left: 25px;
-        color: white;
-        font-weight: 200;
-        font-size: 30px;
-        // background-color: white;
-        padding: 1px;
-        letter-spacing: 1px;
-        text-transform: capitalize;
-        margin-right: 20px;
-      }
+          img {
+            padding-right: 30px;
+            padding-top: 30px;
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            z-index: 1;
+          }
+        }
 
-      h6 {
-        position: absolute;
-        z-index: 1;
-        bottom: 70px;
-        left: 25px;
-        color: black;
-        font-weight: 500;
-        font-size: 15px;
-        background-color: white;
-        padding: 4px;
-        padding-top: 5px;
-        letter-spacing: 0.5px;
-        text-transform: uppercase;
-      }
 
-      h4:hover {
-        color: #009e74;
-      }
+          .featured_main_img {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            object-fit: cover;
+          }
 
-      h6:hover {
-        color: #009e74;
-      }
+          h4 {
+            position: absolute;
+            z-index: 1;
+            bottom: 90px;
+            left: 25px;
+            color: white;
+            font-weight: 200;
+            font-size: 30px;
+            // background-color: white;
+            padding: 1px;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            margin-right: 20px;
+          }
+
+          h6 {
+            position: absolute;
+            z-index: 1;
+            bottom: 70px;
+            left: 25px;
+            color: black;
+            font-weight: 500;
+            font-size: 15px;
+            background-color: white;
+            padding: 4px;
+            padding-top: 5px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+          }
+
+          h4:hover {
+            color: #009e74;
+          }
+
+          h6:hover {
+            color: #009e74;
+          }
+
     }
 
     .mainpage-project-index {

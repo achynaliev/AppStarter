@@ -23,15 +23,15 @@ class FeaturedProject extends React.Component {
     return (
       <section className="FeaturedProject">
         {(this.props.project.likeId.length === 0) ?
-          (<div><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/like.png" className="likeButtonProjectPage" onClick={() => this.handleLike()}/></div>)
+          (<div className="featured_like"><img className="featured_like_img" src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/like.png" className="likeButtonProjectPage" onClick={() => this.handleLike()}/></div>)
           :
-          (<div><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/liked.png" className="dislikeButtonProjectPage" onClick={() => this.cancelLike()}/></div>)
+          (<div className="featured_like"><img className="featured_like_img" src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/liked.png" className="dislikeButtonProjectPage" onClick={() => this.cancelLike()}/></div>)
         }
-        {<Link to={`/projects/${this.props.project.id}`}>
-        <img src={this.props.project.image_url}/>
-          <h4>{this.props.project.title}</h4>
-          <h6>created by: {this.props.project.username}</h6>
-        </Link>}
+          {<Link to={`/projects/${this.props.project.id}`}>
+          <img className="featured_main_img" src={this.props.project.image_url}/>
+            <h4>{this.props.project.title}</h4>
+            <h6>created by: {this.props.project.username}</h6>
+          </Link>}
       </section>
     )
   }
