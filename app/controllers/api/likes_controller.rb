@@ -7,6 +7,14 @@ class Api::LikesController < ApplicationController
       if @like.save
         @project = Project.includes(:user).find(@like.project_id)
         @liked = [@like.id]
+        backings = @project.backings
+        if backings.length === 0
+          @backed = []
+        else
+          backings_id = backings.first.id
+          reward = Reward.find(backings.first.reward_id)
+          @backed =[backings_id, reward.title, reward.full_description]
+        end
         render "api/likes/show"
       end
     else
@@ -22,6 +30,15 @@ class Api::LikesController < ApplicationController
     else
       @liked = [@like.id]
     end
+    backings = @project.backings
+    if backings.length === 0
+      @backed = []
+    else
+      backings_id = backings.first.id
+      reward = Reward.find(backings.first.reward_id)
+      @backed =[backings_id, reward.title, reward.full_description]
+    end
+    @current_user = current_user
     render "api/likes/show"
   end
 

@@ -30,9 +30,23 @@ export const receiveProjectErrors = errors => ({
   errors
 });
 
-export const receiveLikeIndex = (project_id) => dispatch => (
+export const deleteLikeIndex = id => dispatch => (
+  projectAPIUtil.deleteLike(id).then(projects => (dispatch(receiveAllProjects(projects)))
+));
+
+export const deleteLike = (id) => dispatch => (
+  projectAPIUtil.deleteLike(id).then(like => (dispatch(receiveLike(like)))
+));
+
+export const createLikeIndex = (project_id) => dispatch => (
   rewardsAPIUtil.createLike(project_id).then(projects => (
     dispatch(receiveAllProjects(projects))
+  ))
+);
+
+export const createLike = (project_id) => dispatch => (
+  projectAPIUtil.createLike(project_id).then(like => (
+    dispatch(receiveLike(like))
   ))
 );
 
@@ -51,12 +65,6 @@ export const getAProject = (id) => dispatch => (
 //     dispatch(receiveProject(project))) ,(err => dispatch(receiveProjectErrors(err.responseJSON))
 //   ))
 // );
-
-export const createLike = (project_id) => dispatch => (
-  projectAPIUtil.createLike(project_id).then(like => (
-    dispatch(receiveLike(like))
-  ))
-);
 
 export const createProject = project => dispatch => (
   projectAPIUtil.createProject(project).then(project => {

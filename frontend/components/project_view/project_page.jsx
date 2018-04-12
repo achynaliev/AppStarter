@@ -6,6 +6,10 @@ import scrollToComponent from 'react-scroll-to-component';
 class ProjectViewPage extends React.Component {
   constructor(props) {
     super(props);
+    this.handleLike = this.handleLike.bind(this);
+    this.cancelLike = this.cancelLike.bind(this);
+    this.handleCancelPledge = this.handleCancelPledge.bind(this);
+    this.handlePledge = this.handlePledge.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +27,14 @@ class ProjectViewPage extends React.Component {
 
   handleCancelPledge(backingId) {
     this.props.deleteBacking(backingId);
+  }
+
+  handleLike() {
+    this.props.createLike(this.props.project.id)
+  }
+
+  cancelLike() {
+    this.props.deleteLike(this.props.project.likeId[0])
   }
 
   render() {
@@ -54,6 +66,11 @@ class ProjectViewPage extends React.Component {
               {(this.props.project.backings.length === 0) ?
               (<button onClick={() => scrollToComponent(this.rewardslist)}>Back this project</button>) :
               (<button className="cancel-pledge-button" onClick={() => this.handleCancelPledge(this.props.project.backings[0]) }>Cancel pledge</button>)}
+              {(this.props.project.likeId.length === 0) ?
+                (<div><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/like.png" className="likeButtonProjectPage" onClick={() => this.handleLike()}/></div>)
+                :
+                (<div><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/liked.png" className="dislikeButtonProjectPage" onClick={() => this.cancelLike()}/></div>)
+              }
               <h6>All or nothing. This project will only be funded if
                 it reaches its goal by Thu, April 26 2018 4:13 AM PDT.</h6>
             </section>

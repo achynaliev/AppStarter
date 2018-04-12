@@ -25,7 +25,6 @@
       width: 50%;
       padding-right: 350px;
 
-
       h2 {
         font-size: 40px;
         font-weight: 300;
@@ -94,6 +93,33 @@
         padding-right: 0px;
         letter-spacing: 0.5px;
       }
+
+      div {
+        padding-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .likeButtonProjectPage {
+          width: 40px;
+          height: 40px;
+        }
+
+        .dislikeButtonProjectPage {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .likeButtonProjectPage:hover {
+        cursor: pointer;
+      }
+
+      .dislikeButtonProjectPage:hover {
+        cursor: pointer;
+      }
+
+
 
       button:hover {
         background-color: #047361;

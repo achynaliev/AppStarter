@@ -10,7 +10,8 @@ const projectReducer = (state = {}, action ) => {
     case RECEIVE_PROJECT:
       return merge({}, action.currentProject);
     case RECEIVE_LIKE:
-      return merge({}, Object.values(action.currentProject));
+      project = Object.values(action.currentProject);
+      return merge({}, project[0]);
     default:
       return state;
   }

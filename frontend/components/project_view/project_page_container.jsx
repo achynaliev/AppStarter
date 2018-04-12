@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ProjectViewPage from './project_page';
-import { getAProject, createBacking, deleteBacking} from '../../actions/project_actions';
+import { getAProject, createBacking, deleteBacking, createLike, deleteLike } from '../../actions/project_actions';
 import { getAllRewards } from '../../actions/reward_actions';
 import { setSearchUITrue, setSearchUIFalse} from '../../actions/search_ui_actions';
 import { clearSearchResults } from '../../actions/search_actions';
@@ -21,7 +21,9 @@ const mapDispatchToProps = (dispatch) => ({
   deleteBacking: project => dispatch(deleteBacking(project)),
   setSearchUITrue: () => dispatch(setSearchUITrue()),
   clearSearchResults: () => dispatch(clearSearchResults()),
-  setSearchUIFalse: () => dispatch(setSearchUIFalse())
+  setSearchUIFalse: () => dispatch(setSearchUIFalse()),
+  createLike: project_id => dispatch(createLike(project_id)),
+  deleteLike: id => dispatch(deleteLike(id))
 });
 
 export default connect(
