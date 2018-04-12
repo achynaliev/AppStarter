@@ -3,6 +3,7 @@ import FeaturedProject from './featured_project';
 import { getAllProjects, createLikeIndex, deleteLikeIndex } from '../../actions/project_actions';
 
 const mapStateToProps = (state , project) => ({
+  currentUser: state.session.currentUser,
   project: project.project,
   projects: Object.values(state.entities.projects)
 });

@@ -4,6 +4,7 @@ import ProjectsIndex from './projects_index';
 import { getAllProjects } from '../../actions/project_actions';
 
 const mapStateToProps = state => ({
+  currentUser: state.session.currentUser,
   projects: Object.values(state.entities.projects)
 });
 

@@ -11,9 +11,9 @@ class FeaturedProject extends React.Component {
 
   handleLike() {
     if (this.props.currentUser) {
-      this.props.createLike(this.props.project.id)
+      this.props.createLikeIndex(this.props.project.id)
     } else {
-      window.alert("Please login")
+      window.alert("Please login to Like the project")
       // Alert.info('Test message 2', {
       //       position: 'bottom-left',
       //       effect: 'bouncyflip',
