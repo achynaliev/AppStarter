@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
-import ProjectsMainpageIndex from './mainpage_projects_index';
+import FeaturedProject from './featured_project';
 import { getAllProjects, createLikeIndex, deleteLikeIndex } from '../../actions/project_actions';
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state , project) => ({
+  project: project.project,
   projects: Object.values(state.entities.projects)
 });
 
@@ -15,4 +16,4 @@ const mapDispatchToProps = dispatch => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ProjectsMainpageIndex);
+)(FeaturedProject);

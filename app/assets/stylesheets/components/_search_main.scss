@@ -31,6 +31,8 @@
   .search-result-list {
     min-width: 800px;
     background-color: #DDF2EB;
+    max-height: 600px;
+    overflow-y: scroll;
 
     ul {
       display: flex;

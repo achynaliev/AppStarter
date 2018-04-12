@@ -1,12 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const FeaturedProject = ({project}) => (
-        <section className="FeaturedProject">
-          {<Link to={`/projects/${project.id}`}>
-          <img src={project.image_url}/>
-            <h4>{project.title}</h4>
-            <h6>created by: {project.username}</h6>
-          </Link>}
-        </section>
-);
+
+class FeaturedProject extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleLike = this.handleLike.bind(this);
+    this.cancelLike = this.cancelLike.bind(this);
+  }
+
+  handleLike() {
+    this.props.createLikeIndex(this.props.project.id)
+  }
+
+  cancelLike() {
+    this.props.deleteLikeIndex(this.props.project.likeId[0])
+  }
+
+
+  render() {
+    console.log(this.props.project)
+    return (
+      <section className="FeaturedProject">
+        {(this.props.project.likeId.length === 0) ?
+          (<div><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/like.png" className="likeButtonProjectPage" onClick={() => this.handleLike()}/></div>)
+          :
+          (<div><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/liked.png" className="dislikeButtonProjectPage" onClick={() => this.cancelLike()}/></div>)
+        }
+        {<Link to={`/projects/${this.props.project.id}`}>
+        <img src={this.props.project.image_url}/>
+          <h4>{this.props.project.title}</h4>
+          <h6>created by: {this.props.project.username}</h6>
+        </Link>}
+      </section>
+    )
+  }
+}
+
+export default FeaturedProject;
