@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ProjectMainpageItem from './mainpage_project_item';
+import ProjectMainpageItem from './main_index_item_container';
 import FeaturedProject from './featured_container';
 
 class ProjectsMainpageIndex extends React.Component {
