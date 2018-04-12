@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 class RecommendedProjects extends React.Component {
   constructor(props) {
     super(props);
-
   }
 
   componentDidMount() {
-    this.props.getAllProjects();
+    this.props.getRecommenedProjects();
   }
 
 
@@ -19,11 +18,11 @@ class RecommendedProjects extends React.Component {
           <h2>Recommended for you</h2>
         </div>
         <ul>
-          {this.props.projects.map( (project, i) => i > 15 && i < 20 ?
+          {this.props.projects.map( (project) =>
             <Link to={`/projects/${project.id}`} key={`project-${project.id}`}><li>
             <img src={project.image_url}/>
             <h3>{project.title}</h3>
-          </li></Link> : null)}
+          </li></Link>)}
         </ul>
       </div>
     )

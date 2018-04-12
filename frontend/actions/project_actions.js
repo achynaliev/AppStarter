@@ -6,9 +6,15 @@ export const RECEIVE_PROJECT_ERRORS = 'RECEIVE_PROJECT_ERRORS';
 export const CLEAR_PROJECT_ERRORS = 'CLEAR_PROJECT_ERRORS';
 export const RECEIVE_LIKE = 'RECEIVE_LIKE';
 export const RECEIVE_PROJECTS_LIKE = 'RECEIVE_PROJECTS_LIKE';
+export const RECEIVE_RECOMMENED = 'RECEIVE_RECOMMENED';
 
 export const receiveAllProjects = projects => ({
   type: RECEIVE_ALL_PROJECTS,
+  projects
+});
+
+export const receiveRecommended = projects => ({
+  type: RECEIVE_RECOMMENED,
   projects
 });
 
@@ -35,6 +41,12 @@ export const receiveProjectsLike = projects => ({
   type: RECEIVE_PROJECTS_LIKE,
   projects
 });
+
+export const getRecommenedProjects = () => dispatch => (
+  projectAPIUtil.recommendedprojects().then(recommended_projects => (
+    dispatch(receiveRecommended(recommended_projects))
+  ))
+);
 
 export const deleteLikeIndex = (id) => dispatch => (
   projectAPIUtil.deleteLike(id).then(projects => (

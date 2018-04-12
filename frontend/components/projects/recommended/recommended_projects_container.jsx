@@ -1,14 +1,14 @@
 import { connect } from 'react-redux';
 
 import RecommendedProjects from './recommended_projects';
-import { getAllProjects } from '../../../actions/project_actions';
+import { getAllProjects, getRecommenedProjects } from '../../../actions/project_actions';
 
 const mapStateToProps = state => ({
-  projects: Object.values(state.entities.projects)
+  projects: Object.values(state.entities.recommendedProjects)
 });
 
 const mapDispatchToProps = dispatch => ({
-  getAllProjects: () => dispatch(getAllProjects())
+  getRecommenedProjects: () => dispatch(getRecommenedProjects())
 });
 
 export default connect(

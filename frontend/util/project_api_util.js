@@ -51,3 +51,10 @@ export const deleteLike = (id) => {
     url: `/api/likes/${id}`
   })
 };
+
+export const recommendedprojects = () => {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/recommended'
+  })
+}
