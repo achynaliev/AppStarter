@@ -12,7 +12,7 @@ User.create(username: 'David', email: 'atai@david.com', password: "password")
 Project.create(title: "Kira Mechanical Keyboard",
   short_description: "Kira - a compact, full-size mechanical keyboard built without compromise. Designed by Angelo Tobias and the team at Input Club.",
   full_description: "Kira is the ultimate full size mechanical keyboard. Designed by Input Club and legendary keyboard artist Angelo Tobias, its unique RGB underglow and custom mechanical switches give you an unmatched typing experience. Kira is fully hardware programmable, which turns any key into a multi-function macro without active software.",
-funding_goal: 10000, funding_end_date: '20190202', image_url: "https://s3-us-west-1.amazonaws.com/appstarter-chyna/project/andres-urena-438712-unsplash.jpg",
+funding_goal: 15000, funding_end_date: '20190202', image_url: "https://s3-us-west-1.amazonaws.com/appstarter-chyna/project/andres-urena-438712-unsplash.jpg",
 video_url: "lViakh9YI6Y", user_id: 1)
 Project.create(title: "Vion: Auto-Detection l Bluetooth l Smartphone App Multimeter",
   short_description: "The simplest multimeter for the everyday person equipped with automatic detection, Bluetooth connectivity, and a smartphone application",
@@ -26,7 +26,7 @@ video_url: "51JuFmvJiBM", user_id: 2)
 Project.create(title: "Magus Modular Synthesizer Toolkit",
   short_description: "Algorithms are modern day magic spells. Add magic to your music with the Magus, a patchable, programmable synthesizer toolkit.",
   full_description: "Algorithms are the magic potions and spells of the modern day. In electronic music, they make the wooshes, booms, squeals, screams and bops that might have us contemplate the universe, reach personal insight, or dance like mad for days on end. Join us on a journey to create ever more powerful algorithms, and to make them open and available to everyone. We already have a community of hundreds of talented synthesists sharing their work. Let's make it bigger, let's make it better, let's do it together!",
-funding_goal: 1002330, funding_end_date: '20190202', image_url: "https://s3-us-west-1.amazonaws.com/appstarter-chyna/project/apple-caffeine-coffee-597330.jpg",
+funding_goal: 20000, funding_end_date: '20190202', image_url: "https://s3-us-west-1.amazonaws.com/appstarter-chyna/project/apple-caffeine-coffee-597330.jpg",
 video_url: "1qsI0Z4AMZU", user_id: 3)
 Project.create(title: "The Future of Mobile Filmmaking: Anamorphic, Battery, Gimbal",
   short_description: "Shoot amazing cinematic video on your iPhone, Galaxy, or Pixel device. Now you can make your small camera as good as your big camera.",
