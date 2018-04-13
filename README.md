@@ -4,6 +4,8 @@
 
 AppStarter is a clone of Kickstarter, a crowdfunding website where users can create projects and support projects that they like. AppStarter utilizes a React\Redux frontend, Ruby on Rails backend, and a PostgreSQL database. The app uses JS ES6, BCrypt for password salting and hashing, and Webpack for bundling.
 
+[AppStarter wiki](https://github.com/achynaliev/AppStarter/wiki)
+
 ## Technology
 
 Built with ...
@@ -27,7 +29,13 @@ Built with ...
 
 ## Design and implementation
 
+### Projects
+
+On project show page, users can view details for a project. If users like the project they can like and back the project for a reward. Project show page provides detailed information about the project, video from project creator, current information on total amount of money project has raised, number of backers
+
 ![main](https://github.com/achynaliev/AppStarter/blob/master/wireframes/projectpage.png)
+
+as you can see in the code snipper below projects has many relations with other components of AppStarter. Model level validations as well database level validations. All foreign keys in the database are indexed to increase performance.
 
 ```ruby
 class Project < ApplicationRecord
