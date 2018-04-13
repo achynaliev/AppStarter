@@ -1,4 +1,4 @@
-#AppStarter
+# AppStarter
 
 AppStarter is a clone of Kickstarter, a crowdfunding website where users can create projects and support projects that they like. AppStarter utilizes a React\Redux frontend, Ruby on Rails backend, and a PostgreSQL database. The app uses JS ES6, BCrypt for password salting and hashing, and Webpack for bundling.
 

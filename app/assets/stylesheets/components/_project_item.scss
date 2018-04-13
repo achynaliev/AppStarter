@@ -1,7 +1,9 @@
-
 .main-body {
   font-family: Helvetica;
   padding-bottom: 50px;
+  img {
+    cursor: pointer;
+  }
 
   .explore-filter {
     display: flex;
