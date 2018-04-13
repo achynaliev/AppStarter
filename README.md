@@ -1,6 +1,6 @@
 # AppStarter
 
-[Live](https://apstarter.herokuapp.com/)
+[Live Demo](https://apstarter.herokuapp.com/)
 
 AppStarter is a clone of Kickstarter, a crowdfunding website where users can create projects and support projects that they like. AppStarter utilizes a React\Redux frontend, Ruby on Rails backend, and a PostgreSQL database. The app uses JS ES6, BCrypt for password salting and hashing, and Webpack for bundling.
 
@@ -17,15 +17,14 @@ Built with ...
 
 ## Features
 
-  * Project creation/view
-  * Most popular projects Based on number of Likes
+  * User can create projects
+  * Most popular projects based on number of Likes
   * Backings/Rewards
-  * Users
-  * Authentication frontend/backend
-  * Likes
+  * Secure frontend to backend user authentication using BCrypt.
+  * Users can like projects
   * Search
   * Explore by categories
 
-# Design
+## Design
 
-![main](https://github.com/achynaliev/AppStarter/blob/master/wireframes/mainpage.png)
+![main](https://github.com/achynaliev/AppStarter/blob/master/wireframes/projectpage.png)
