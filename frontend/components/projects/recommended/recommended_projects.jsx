@@ -15,7 +15,7 @@ class RecommendedProjects extends React.Component {
     return (
       <div className="mainpage-recommened_projects">
         <div>
-          <h2>Recommended for you</h2>
+          <h2>Most popular projects</h2>
         </div>
         <ul>
           {this.props.projects.map( (project) =>
