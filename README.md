@@ -31,11 +31,14 @@ Built with ...
 
 ### Projects
 
+
 On project show page, users can view details for a project. If users like the project they can like and back the project for a reward. Project show page provides detailed information about the project, video from project creator, current information on total amount of money project has raised, number of backers
+
 
 ![main](https://github.com/achynaliev/AppStarter/blob/master/wireframes/projectpage.png)
 
 as you can see in the code snipper below projects has many relations with other components of AppStarter. Model level validations as well database level validations. All foreign keys in the database are indexed to increase performance.
+
 
 ```ruby
 class Project < ApplicationRecord
@@ -60,3 +63,9 @@ class Project < ApplicationRecord
 end
 
 ```
+
+### Explore page
+
+Users can explore projects by categories, each project will display some information. Users can like the project or can click on project and find more information on project show page
+
+![explore](https://github.com/achynaliev/AppStarter/blob/master/wireframes/explorepage.png)
