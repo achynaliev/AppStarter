@@ -290,3 +290,8 @@ ProjectCategory.create(project_id: 24, category_id: 3)
 ProjectCategory.create(project_id: 25, category_id: 3)
 ProjectCategory.create(project_id: 26, category_id: 3)
 ProjectCategory.create(project_id: 27, category_id: 3)
+
+Like.create(user_id: 2, project_id: 22)
+Like.create(user_id: 2, project_id: 24)
+Like.create(user_id: 2, project_id: 25)
+Like.create(user_id: 2, project_id: 26)
