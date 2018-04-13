@@ -31,10 +31,6 @@ class ProjectViewPage extends React.Component {
     this.props.deleteBacking(backingId);
   }
 
-  pledgePercentage() {
-    this.props.project.total_pledged / (this.props.project.funding_goal / 100)
-  }
-
   handleLike() {
     if (this.props.currentUser) {
       this.props.createLike(this.props.project.id)
