@@ -20,7 +20,12 @@ Built with ...
   * Project creation/view
   * Most popular projects Based on number of Likes
   * Backings/Rewards
+  * Users
   * Authentication frontend/backend
   * Likes
   * Search
   * Explore by categories
+
+# Design
+
+![main](https://github.com/achynaliev/AppStarter/blob/master/wireframes/mainpage.png)
