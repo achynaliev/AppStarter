@@ -31,6 +31,10 @@ class ProjectViewPage extends React.Component {
     this.props.deleteBacking(backingId);
   }
 
+  pledgePercentage() {
+    this.props.project.total_pledged / (this.props.project.funding_goal / 100)
+  }
+
   handleLike() {
     if (this.props.currentUser) {
       this.props.createLike(this.props.project.id)
@@ -49,6 +53,7 @@ class ProjectViewPage extends React.Component {
   }
 
   render() {
+    console.log(typeof this.props.total_pledged)
     if (this.props.project.backings) {
       return (
         <section className="project-page-view">
@@ -68,8 +73,9 @@ class ProjectViewPage extends React.Component {
               </iframe>
             </section>
             <section className="project-page-backing">
+              <div className="progressBar" style={{width: `${this.props.project.total_pledged / (this.props.project.funding_goal / 100)}%`, maxWidth: '100%'}}></div>
               <h2>${this.props.project.total_pledged}</h2>
-              <h5 className='project-backing-h5'>pledged of $50,000 goal</h5>
+              <h5 className='project-backing-h5'>pledged of ${this.props.project.funding_goal} goal</h5>
               <h3>{this.props.project.num_backers}</h3>
               <h4>backers</h4>
               <h3>20</h3>

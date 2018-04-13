@@ -46,14 +46,14 @@ class Project < ApplicationRecord
 
   def self.total_pledged(project_id)
     backings = Project.find(project_id).backings
-    total = 43590
+    total = 8599
     backings.each do |backing|
       if backing.reward_id == 1
-        total += 19
+        total += 199
       elsif backing.reward_id == 2
-        total += 49
+        total += 299
       else
-        total += 99
+        total += 449
       end
     end
 

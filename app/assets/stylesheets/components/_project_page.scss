@@ -49,8 +49,14 @@
 
 
     .project-page-backing {
-      border-top: solid #009e73 3px;
+      border-top: solid lightgray 4px;
       margin-left: 30px;
+
+      .progressBar {
+        margin-top: -4px;
+        border-top: solid #009e73 4px;
+        z-index: 1;
+      }
 
       h2 {
         margin-top: 20px;

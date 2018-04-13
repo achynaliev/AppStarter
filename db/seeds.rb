@@ -255,9 +255,9 @@ Vion measures voltage and resistance has a pair of probes without a body and all
 funding_goal: 10000, funding_end_date: '20120202', image_url: "https://s3-us-west-1.amazonaws.com/appstarter-chyna/project/veit-hammer-512259-unsplash.jpg",
 video_url: "dWc6Goy6cRk", user_id: 3)
 
-Reward.create(pledge_amount: 19, description: "golden reward", title: "golden reward")
-Reward.create(pledge_amount: 49, description: "platinum reward", title: "platinum reward")
-Reward.create(pledge_amount: 99, description: "diamond reward", title: "diamond reward")
+Reward.create(pledge_amount: 199, description: "golden reward", title: "golden reward")
+Reward.create(pledge_amount: 299, description: "platinum reward", title: "platinum reward")
+Reward.create(pledge_amount: 449, description: "diamond reward", title: "diamond reward")
 
 Category.create(name: 'tech')
 Category.create(name: 'design')

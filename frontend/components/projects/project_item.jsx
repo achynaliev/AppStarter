@@ -53,8 +53,8 @@ class ProjectItemView extends React.Component {
             <h6>by: {this.props.project.username}</h6>
           </div>
           <div className="botton-explore-project-item">
-            <h3>$86,260  pledged</h3>
-            <h4>862% funded</h4>
+            <h3>${this.props.project.total_pledged}  pledged</h3>
+            <h4>{this.props.project.total_pledged / (this.props.project.funding_goal / 100)}% funded</h4>
             <h4>20days to go</h4>
             <h5>{this.category()}</h5>
           </div>
