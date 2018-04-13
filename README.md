@@ -69,3 +69,11 @@ end
 Users can explore projects by categories, each project will display some information. Users can like the project or can click on project and find more information on project show page
 
 ![explore](https://github.com/achynaliev/AppStarter/blob/master/wireframes/explorepage.png)
+
+### Most popular projects
+
+![explore](https://github.com/achynaliev/AppStarter/blob/master/wireframes/mostpopular.png)
+
+On the main page of AppStarter users can view most popular projects based on number of likes.
+
+## Future of AppStarter
