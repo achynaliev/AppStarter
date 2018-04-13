@@ -40,11 +40,11 @@ class ProjectItemView extends React.Component {
   render() {
     return (
       <li>
-        {(this.props.project.likeId.length === 0) ?
-          (<div className="featured_like"><img className="featured_like_img" src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/like.png" className="likeButtonProjectPage" onClick={() => this.handleLike()}/></div>)
+        {this.props.currentUser ? (this.props.project.likeId.length === 0 ?
+          (<div className="featured_like"><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/like.png" className="likeButtonProjectPage" onClick={() => this.handleLike()}/></div>)
           :
-          (<div className="featured_like"><img className="featured_like_img" src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/liked.png" className="dislikeButtonProjectPage" onClick={() => this.cancelLike()}/></div>)
-        }
+          (<div className="featured_like"><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/liked.png" className="dislikeButtonProjectPage" onClick={() => this.cancelLike()}/></div>)
+        ) : (null)}
         <Link to={`/projects/${this.props.project.id}`}>
         <section className="ProjectItemView">
           <img src={this.props.project.image_url}/>

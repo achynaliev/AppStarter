@@ -35,11 +35,11 @@ class ProjectMainpageItem extends React.Component {
           <h6>BY: {this.props.project.username}</h6>
         </div>
         </Link>}
-        {(this.props.project.likeId.length === 0) ?
-          (<div className="featured_like"><img className="featured_like_img" src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/like.png" className="likeButtonProjectPage" onClick={() => this.handleLike()}/></div>)
+        {this.props.currentUser ? (this.props.project.likeId.length === 0 ?
+          (<div className="featured_like"><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/like.png" className="likeButtonProjectPage" onClick={() => this.handleLike()}/></div>)
           :
-          (<div className="featured_like"><img className="featured_like_img" src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/liked.png" className="dislikeButtonProjectPage" onClick={() => this.cancelLike()}/></div>)
-        }
+          (<div className="featured_like"><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/liked.png" className="dislikeButtonProjectPage" onClick={() => this.cancelLike()}/></div>)
+        ) : (null)}
       </li>
     )
   }

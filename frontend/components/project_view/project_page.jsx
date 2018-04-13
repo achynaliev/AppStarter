@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { createBacking, deleteBacking } from '../../util/backing_api_util';
 import scrollToComponent from 'react-scroll-to-component';
-import Alert from 'react-s-alert';
-// import 'react-s-alert/dist/s-alert-default.css';
+import { Alert } from 'reactstrap';
 
 class ProjectViewPage extends React.Component {
   constructor(props) {
@@ -78,11 +77,11 @@ class ProjectViewPage extends React.Component {
               {(this.props.project.backings.length === 0) ?
               (<button onClick={() => scrollToComponent(this.rewardslist)}>Back this project</button>) :
               (<button className="cancel-pledge-button" onClick={() => this.handleCancelPledge(this.props.project.backings[0]) }>Cancel pledge</button>)}
-              {(this.props.project.likeId.length === 0) ?
+              {this.props.currentUser ? (this.props.project.likeId.length === 0 ?
                 (<div><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/like.png" className="likeButtonProjectPage" onClick={() => this.handleLike()}/></div>)
                 :
                 (<div><img src="https://s3-us-west-1.amazonaws.com/appstarter-chyna/liked.png" className="dislikeButtonProjectPage" onClick={() => this.cancelLike()}/></div>)
-              }
+              ) : (null)}
               <h6>All or nothing. This project will only be funded if
                 it reaches its goal by Thu, April 26 2018 4:13 AM PDT.</h6>
             </section>
