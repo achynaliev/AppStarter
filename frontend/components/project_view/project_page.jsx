@@ -49,7 +49,6 @@ class ProjectViewPage extends React.Component {
   }
 
   render() {
-    console.log(typeof this.props.total_pledged)
     if (this.props.project.backings) {
       return (
         <section className="project-page-view">
