@@ -42,16 +42,16 @@ class AppStaterFooter extends React.Component {
             <li>
               <a style={{display: "table-cell"}} target="_blank" href="https://github.com/achynaliev">
               <h2>HELLO</h2>
-              <h3>Kickstarter Blog</h3>
+              <h3>Appstarter Blog</h3>
               <h3>Engineering Blog</h3>
               <h3>Newsletters</h3>
               </a>
             </li>
             <li>
               <a style={{display: "table-cell"}} target="_blank" href="https://www.linkedin.com/in/achynaliev/">
-              <h2>MORE FROM KICKSTARTER</h2>
+              <h2>MORE FROM APPSTARTER</h2>
               <h3>Drip</h3>
-              <h3>Kickstarter Live</h3>
+              <h3>Appstarter Live</h3>
               <h3>The Creative Independent</h3>
               </a>
             </li>

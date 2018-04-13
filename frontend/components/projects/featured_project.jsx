@@ -28,7 +28,6 @@ class FeaturedProject extends React.Component {
 
 
   render() {
-    console.log(this.props.project)
     return (
       <section className="FeaturedProject">
         {this.props.currentUser ? (this.props.project.likeId.length === 0 ?
