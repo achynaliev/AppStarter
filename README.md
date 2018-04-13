@@ -76,4 +76,5 @@ Users can explore projects by categories, each project will display some informa
 
 On the main page of AppStarter users can view most popular projects based on number of likes.
 
-## Future of AppStarter
+### Future of AppStarter
+...
