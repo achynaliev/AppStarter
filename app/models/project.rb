@@ -44,10 +44,9 @@ class Project < ApplicationRecord
     end
   end
 
-  def self.total_pledged(project_id)
-    backings = Project.find(project_id).backings
+  def total_pledged
     total = 8599
-    backings.each do |backing|
+    self.backings.each do |backing|
       if backing.reward_id == 1
         total += 199
       elsif backing.reward_id == 2

@@ -25,6 +25,30 @@ Built with ...
   * Search
   * Explore by categories
 
-## Design
+## Design and implementation
 
 ![main](https://github.com/achynaliev/AppStarter/blob/master/wireframes/projectpage.png)
+
+```ruby
+class Project < ApplicationRecord
+  validates :title, :short_description, :full_description, :funding_goal,
+            :funding_end_date, :user_id, presence: true
+
+  belongs_to :user
+  has_many :project_categories
+  has_many :categories
+  has_many :backings
+  has_many :rewards
+  has_many :likes
+  has_many :likers
+
+  def self.search_project(query)
+    query = "%" + query.to_s.downcase + "%"
+    search_result = Project.where('
+      lower(title) LIKE ? or lower(short_description) LIKE ?', query, query)
+  end
+
+  #...
+end
+
+```

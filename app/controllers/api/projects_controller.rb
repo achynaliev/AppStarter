@@ -1,7 +1,7 @@
 class Api::ProjectsController < ApplicationController
 
   def index
-    @projects = Project.includes(:user).includes(:categories).all.limit(27)
+    @projects = Project.includes(:user).includes(:categories, :backings).all.limit(27)
     # @category = @projects.categories.pluck(:id)
     @current_user = current_user
     render "api/projects/index"
@@ -19,7 +19,7 @@ class Api::ProjectsController < ApplicationController
       end
     end
     @current_user = current_user
-    @total_pledged = Project.total_pledged(@project.id)
+    @total_pledged = @project.total_pledged
     @num_backers = @project.backings.count + 23
     render "api/projects/show"
   end

@@ -5,7 +5,7 @@ class Api::RecommendedController < ApplicationController
     proj_ids = recommended.keys
     proj_ids = proj_ids.slice(0, 4)
 
-    # @projects = Project.where('id IN ?', proj_ids)
+    # @projects = Project.where("id IN ?", proj_ids)
     @project1 = Project.find(proj_ids[0]);
     @project2 = Project.find(proj_ids[1]);
     @project3 = Project.find(proj_ids[2]);
