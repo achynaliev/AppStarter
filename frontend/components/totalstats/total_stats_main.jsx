@@ -11,6 +11,13 @@ class AppStaterStatsView extends React.Component {
   //   this.props.getAProject(this.props.projectId);
   // }
 
+  myKaffeine() {
+    var http = require("http");
+    setInterval(function() {
+    console.log(http.get("http://apstarter.herokuapp.com"));
+  }, 300000); // every 15 minutes (900000)
+  }
+
   today() {
     let today = new Date();
     let dd = today.getDate();
@@ -47,6 +54,7 @@ class AppStaterStatsView extends React.Component {
             <h5>3,887</h5>
           </li>
         </ul>
+        {this.myKaffeine()}
       </section>
     )
   }
